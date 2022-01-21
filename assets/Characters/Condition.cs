@@ -45,39 +45,9 @@ public class Condition{
         }
 
         if(type == Conditions.numberEqualTo || type == Conditions.numberLessThan ||type == Conditions.numberMoreThan){
-
-            switch(affectedVariable){
-                case Variables.A:
-                    if ( type == Conditions.numberEqualTo )res = chara.GetComponent<BehCharacter>().A == affectedNumber;
-                    if ( type == Conditions.numberLessThan )res = chara.GetComponent<BehCharacter>().A < affectedNumber;
-                    if ( type == Conditions.numberMoreThan )res = chara.GetComponent<BehCharacter>().A > affectedNumber;
-                break;
-                case Variables.B:
-                    if ( type == Conditions.numberEqualTo )res = chara.GetComponent<BehCharacter>().B == affectedNumber;
-                    if ( type == Conditions.numberLessThan )res = chara.GetComponent<BehCharacter>().B < affectedNumber;
-                    if ( type == Conditions.numberMoreThan )res = chara.GetComponent<BehCharacter>().B > affectedNumber;
-                break;
-                case Variables.C:
-                    if ( type == Conditions.numberEqualTo )res = chara.GetComponent<BehCharacter>().C == affectedNumber;
-                    if ( type == Conditions.numberLessThan )res = chara.GetComponent<BehCharacter>().C < affectedNumber;
-                    if ( type == Conditions.numberMoreThan )res = chara.GetComponent<BehCharacter>().C > affectedNumber;
-                break;
-                case Variables.D:
-                    if ( type == Conditions.numberEqualTo )res = chara.GetComponent<BehCharacter>().D == affectedNumber;
-                    if ( type == Conditions.numberLessThan )res = chara.GetComponent<BehCharacter>().D < affectedNumber;
-                    if ( type == Conditions.numberMoreThan )res = chara.GetComponent<BehCharacter>().D > affectedNumber;
-                break;
-                case Variables.E:
-                    if ( type == Conditions.numberEqualTo )res = chara.GetComponent<BehCharacter>().E == affectedNumber;
-                    if ( type == Conditions.numberLessThan )res = chara.GetComponent<BehCharacter>().E < affectedNumber;
-                    if ( type == Conditions.numberMoreThan )res = chara.GetComponent<BehCharacter>().E > affectedNumber;
-                break;
-                case Variables.F:
-                    if ( type == Conditions.numberEqualTo )res = chara.GetComponent<BehCharacter>().F == affectedNumber;
-                    if ( type == Conditions.numberLessThan )res = chara.GetComponent<BehCharacter>().F < affectedNumber;
-                    if ( type == Conditions.numberMoreThan )res = chara.GetComponent<BehCharacter>().F > affectedNumber;
-                break;
-            }
+            if ( type == Conditions.numberEqualTo ) res = chara.GetComponent<BehCharacter>().variables[((int)affectedVariable)] == affectedNumber;
+            else if ( type == Conditions.numberLessThan )res = chara.GetComponent<BehCharacter>().variables[((int)affectedVariable)] < affectedNumber;
+            else if ( type == Conditions.numberMoreThan )res = chara.GetComponent<BehCharacter>().variables[((int)affectedVariable)] > affectedNumber;
         }
 
         if(!positive) res = !res;

@@ -42,7 +42,7 @@ public class BehBoard : MonoBehaviour
                 board[i,j] = Instantiate(squareEmpty);
                 board[i,j].transform.position = new Vector2( i*squareWH, -j*squareWH );
                 board[i,j].SendMessage("setPosition", new Vector2i(i,j));
-                if(i==3 && j==4){
+                if(i==2 && j==5){
                     things.Add(Instantiate(character));
                     int last = things.Count-1;
                     things[last].transform.position = new Vector2( i*squareWH, -j*squareWH );
@@ -50,16 +50,42 @@ public class BehBoard : MonoBehaviour
                     things[last].GetComponent<BehCharacter>().currentSquare = board[i,j];
                     things[last].GetComponent<BehCharacter>().targetSquare  = board[i,j];
 
-                    things[last].GetComponent<BehCharacter>().rules = new Rule[2];
+                    things[last].GetComponent<BehCharacter>().variables[(int)Variables.B]=2;
+                    things[last].GetComponent<BehCharacter>().variables[(int)Variables.C]=2;
+
+                    things[last].GetComponent<BehCharacter>().rules = new Rule[4];
                     things[last].GetComponent<BehCharacter>().rules[0] = new Rule();
-                    things[last].GetComponent<BehCharacter>().rules[0].addCondition(Conditions.see, Objects.wall, 2, Variables.A, false);
-                    things[last].GetComponent<BehCharacter>().rules[0].setAction( new Action(HardActions.moveUp) );
                     things[last].GetComponent<BehCharacter>().rules[1] = new Rule();
-                    things[last].GetComponent<BehCharacter>().rules[1].setAction( new Action(HardActions.moveLeft) );
+                    things[last].GetComponent<BehCharacter>().rules[2] = new Rule();
+                    things[last].GetComponent<BehCharacter>().rules[3] = new Rule();
+
+                    things[last].GetComponent<BehCharacter>().rules[0].addCondition(Conditions.numberEqualTo, Objects.player, 0, Variables.B);
+                    Action act0 = new Action(HardActions.moveLeft);
+                    act0.addSoftAction(SoftActions.setVariable, Variables.A, 0);
+                    act0.addSoftAction(SoftActions.setVariable, Variables.B, 2);
+                    things[last].GetComponent<BehCharacter>().rules[0].setAction(act0);
+
+                    things[last].GetComponent<BehCharacter>().rules[1].addCondition(Conditions.numberEqualTo, Objects.player, 0, Variables.C);
+                    Action act1 = new Action(HardActions.moveRight);
+                    act1.addSoftAction(SoftActions.setVariable, Variables.A, 1);
+                    act1.addSoftAction(SoftActions.setVariable, Variables.C, 2);
+                    things[last].GetComponent<BehCharacter>().rules[1].setAction( act1 );
+
+                    things[last].GetComponent<BehCharacter>().rules[2].addCondition(Conditions.numberEqualTo, Objects.player, 1, Variables.A);
+                    Action act2 = new Action(HardActions.moveRight);
+                    act2.addSoftAction(SoftActions.decVariable, Variables.B);
+                    things[last].GetComponent<BehCharacter>().rules[2].setAction( act2 );
+
+                    things[last].GetComponent<BehCharacter>().rules[3].addCondition(Conditions.numberEqualTo, Objects.player, 0, Variables.A);
+                    Action act3 = new Action(HardActions.moveLeft);
+                    act3.addSoftAction(SoftActions.decVariable, Variables.C);
+                    things[last].GetComponent<BehCharacter>().rules[3].setAction( act3 );
+
+
                     things[last].GetComponent<BehCharacter>().objectType=Objects.player;
                     things[last].GetComponent<BehCharacter>().nombre="Jugador1";
 
-                    things[last].GetComponent<SpriteRenderer>().color = new Color(0,1,1, 1);
+                    things[last].GetComponent<SpriteRenderer>().color = new Color(0,1,1,1);
 
                     player1 = things[last];
                 }
@@ -76,8 +102,8 @@ public class BehBoard : MonoBehaviour
                     things[last].GetComponent<BehCharacter>().rules[0].addCondition(Conditions.see, Objects.wall, 0, Variables.A, false);
                     things[last].GetComponent<BehCharacter>().rules[0].setAction( new Action(HardActions.moveRight) );
                     things[last].GetComponent<BehCharacter>().rules[1] = new Rule();
-                    things[last].GetComponent<BehCharacter>().rules[1].addCondition(Conditions.numberEqualTo, Objects.player, 1,Variables.A, true);
-                    Action action = new Action(HardActions.moveLeft);
+                    //things[last].GetComponent<BehCharacter>().rules[1].addCondition(Conditions.numberEqualTo, Objects.player, 1,Variables.A, true);
+                    Action action = new Action(HardActions.moveUp);
                     action.addSoftAction(SoftActions.incVariable, Variables.A);
                     things[last].GetComponent<BehCharacter>().rules[1].setAction( action );
                     things[last].GetComponent<BehCharacter>().objectType=Objects.player;

@@ -138,23 +138,23 @@ public class BehUIRule : MonoBehaviour
                 condTextGO.GetComponent<RectTransform>().sizeDelta = new Vector2(190,110);
 
             string actText = calculateActionText(rule.action);
-            GameObject actTextGO = createText(newImg, new Vector2(270,-70), actText, new Color(0,0,1,1), 30);
+            GameObject actTextGO = createText(newImg, new Vector2(270,-70), actText, new Color(0,0,1,1), 20);
             actTextGO.GetComponent<Text>().horizontalOverflow=HorizontalWrapMode.Wrap;
             actTextGO.GetComponent<RectTransform>().anchorMin = new Vector2(0,1);
             actTextGO.GetComponent<RectTransform>().anchorMax = new Vector2(0,1);
             actTextGO.GetComponent<RectTransform>().pivot = new Vector2(0,1);
-            actTextGO.GetComponent<RectTransform>().sizeDelta = new Vector2(190,110);
+            actTextGO.GetComponent<RectTransform>().sizeDelta = new Vector2(210,110);
         }
     }
 
     public void updateValues(){
 //Valores texto inmediatos
-        A_value.text = infoSource.A.ToString();
-        B_value.text = infoSource.B.ToString();
-        C_value.text = infoSource.C.ToString();
-        D_value.text = infoSource.D.ToString();
-        E_value.text = infoSource.E.ToString();
-        F_value.text = infoSource.F.ToString();
+        A_value.text = infoSource.variables[(int)Variables.A].ToString();
+        B_value.text = infoSource.variables[(int)Variables.B].ToString();
+        C_value.text = infoSource.variables[(int)Variables.C].ToString();
+        D_value.text = infoSource.variables[(int)Variables.D].ToString();
+        E_value.text = infoSource.variables[(int)Variables.E].ToString();
+        F_value.text = infoSource.variables[(int)Variables.F].ToString();
         name_value.text = infoSource.nombre.ToString();
         HP_value.text = infoSource.currHP.ToString() + "/" + infoSource.maxHP.ToString();
         Stars_value.text = infoSource.currStars.ToString() + "/" + infoSource.maxStars.ToString();
@@ -243,6 +243,31 @@ public class BehUIRule : MonoBehaviour
 
     public string calculateActionText(Action action){
         string res="";
+
+        foreach(SoftAction act in action.softActions){
+            string vari="";
+            switch(act.affectedVariable){
+                case Variables.A: vari= "A "; break;
+                case Variables.B: vari= "B "; break;
+                case Variables.C: vari= "C "; break;
+                case Variables.D: vari= "D "; break;
+                case Variables.E: vari= "E "; break;
+                case Variables.F: vari= "F "; break;
+            }
+
+            switch(act.softAction){
+                case SoftActions.setVariable:
+                    res+= "Le doy el valor " + act.affectedNumber.ToString() + " a mi variable " + vari;
+                break;
+                case SoftActions.incVariable:
+                    res+= "Sumo 1 a mi variable " + vari;
+                break;
+                case SoftActions.decVariable:
+                    res+= "Resto 1 a mi variable " + vari;
+                break;
+            }
+            res+="\n";
+        }
 
         switch(action.hardAction){
             case HardActions.moveRight: res += "Me muevo a mi derecha"; break;

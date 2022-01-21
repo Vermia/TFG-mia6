@@ -22,12 +22,7 @@ public class BehCharacter : MonoBehaviour
     public int currHP;
     public int maxStars;
     public int currStars;
-    public int A;
-    public int B;
-    public int C;
-    public int D;
-    public int E;
-    public int F;
+    public int[] variables;
     public string nombre;
 
     // Start is called before the first frame update
@@ -39,12 +34,8 @@ public class BehCharacter : MonoBehaviour
         rules = new Rule[1];
         rules[0] = new Rule();
         rules[0].setAction(new Action(HardActions.doNothing));
-        A=1;
-        B=1;
-        C=1;
-        D=1;
-        E=1;
-        F=1;
+        variables = new int[6];
+        for(int i=0 ; i<6; i++) variables[i]=1;
         maxHP = 60;
         currHP = 60;
         maxStars=100;
@@ -103,6 +94,7 @@ public class BehCharacter : MonoBehaviour
         currentTurn=HardActions.doNothing;
         for(int i=0 ; i<rules.Length ; ++i){
             if(rules[i].run(this)){
+                
                 break;
             }
         }

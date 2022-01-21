@@ -9,9 +9,9 @@ public enum SoftActions{
 }
 
 public class SoftAction{
-    SoftActions softAction;
-    public Variables affectedVariable;
-    public int affectedNumber;
+    public SoftActions softAction {get; private set;}
+    public Variables affectedVariable {get; private set;}
+    public int affectedNumber {get; private set;}
 
 
     public SoftAction(SoftActions paction, Variables pvar, int pnumber = 0){
@@ -20,22 +20,15 @@ public class SoftAction{
 
 
     public void perform(BehCharacter chara){
-        int variableInQuestion = chara.A;
-        if(affectedVariable == Variables.B) variableInQuestion = chara.B;
-        else if(affectedVariable == Variables.C) variableInQuestion = chara.C;
-        else if(affectedVariable == Variables.D) variableInQuestion = chara.D;
-        else if(affectedVariable == Variables.E) variableInQuestion = chara.E;
-        else if(affectedVariable == Variables.F) variableInQuestion = chara.F;
-
         switch(softAction){
             case SoftActions.incVariable:
-                chara.A++; if(chara.A>9) chara.A=0;
+                chara.variables[(int)affectedVariable]++; if(chara.variables[(int)affectedVariable]>9) chara.variables[(int)affectedVariable]=0;
             break;
             case SoftActions.decVariable:
-                chara.A--; if(chara.A<0) chara.A=9;
+                chara.variables[(int)affectedVariable]--; if(chara.variables[(int)affectedVariable]<0) chara.variables[(int)affectedVariable]=9;
             break;
             case SoftActions.setVariable:
-                variableInQuestion = affectedNumber; //Nunca pasar valores que no esten entre 0 y 9
+                chara.variables[(int)affectedVariable] = affectedNumber; //Nunca pasar valores que no esten entre 0 y 9
             break;
         }
     }
