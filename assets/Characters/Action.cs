@@ -17,8 +17,8 @@ public enum HardActions{
 public class Action{
     
 
-    public HardActions hardAction{get; private set;}
-    public List<SoftAction> softActions{get; private set;}
+    public HardActions hardAction;
+    public List<SoftAction> softActions;
 
     public Action(HardActions pha){
         hardAction = pha;
@@ -27,6 +27,10 @@ public class Action{
 
     public void addSoftAction(SoftActions psoft, Variables pvar, int pnumber = 0){
         softActions.Add(new SoftAction(psoft, pvar, pnumber));
+    }
+
+    public void addSoftAction(SoftAction psoft){
+        softActions.Add(psoft);
     }
 
     public void perform(BehCharacter chara){

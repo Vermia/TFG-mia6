@@ -7,12 +7,16 @@ public enum Conditions{
     see, numberEqualTo, numberLessThan, numberMoreThan
 }
 
+public enum seeDirections{
+    right, rightup, up, leftup, left, leftdown, down, rightdown, rightfar, upfar, leftfar, downfar
+}
+
 public class Condition{
-    public Objects affectedObject {get; private set;}
-    public int affectedNumber{get; private set;}
-    public Variables affectedVariable{get; private set;}
-    public bool positive{get; private set;}
-    public Conditions type{get; private set;}
+    public Objects affectedObject ;
+    public int affectedNumber;
+    public Variables affectedVariable;
+    public bool positive;
+    public Conditions type;
 
     public Condition(Conditions ptype, Objects pobject, int pnumber, Variables pvar, bool positive = true){
         type = ptype; affectedObject = pobject; affectedNumber = pnumber; affectedVariable=pvar; this.positive=positive;

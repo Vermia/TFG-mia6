@@ -30,7 +30,7 @@ public class BehUIRule : MonoBehaviour
    
 
     void Awake(){
-        movingState=UIMovingState.movingL;
+        movingState=UIMovingState.standbyR;
         wholeSeconds = 1f;
         UIWidth = GetComponent<RectTransform>().sizeDelta.x;
         //ruleArrayInfo = BehBoard.things[0].GetComponent<BehCharacter>().rules;
@@ -170,7 +170,7 @@ public class BehUIRule : MonoBehaviour
         movingState=UIMovingState.movingR;
     }
 
-    public GameObject createText(GameObject parent, Vector2 pos, string textContent, Color color, int size){
+    public static GameObject createText(GameObject parent, Vector2 pos, string textContent, Color color, int size){
         GameObject txtCondition = new GameObject();
 
         txtCondition.AddComponent(typeof(Text));
@@ -188,9 +188,9 @@ public class BehUIRule : MonoBehaviour
         return txtCondition;
     }
 
-    public string calculateCondText(Condition cond){
+    public static string calculateCondText(Condition cond){
         string res = "";
-
+        if(cond==null) return "";
 
         switch(cond.type){
             case Conditions.see:
@@ -241,7 +241,7 @@ public class BehUIRule : MonoBehaviour
         return res;
     }
 
-    public string calculateActionText(Action action){
+    public static string calculateActionText(Action action){
         string res="";
 
         foreach(SoftAction act in action.softActions){

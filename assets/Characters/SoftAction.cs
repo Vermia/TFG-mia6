@@ -9,9 +9,9 @@ public enum SoftActions{
 }
 
 public class SoftAction{
-    public SoftActions softAction {get; private set;}
-    public Variables affectedVariable {get; private set;}
-    public int affectedNumber {get; private set;}
+    public SoftActions softAction ;
+    public Variables affectedVariable ;
+    public int affectedNumber;
 
 
     public SoftAction(SoftActions paction, Variables pvar, int pnumber = 0){

@@ -20,10 +20,20 @@ public class Rule{
 
     public Rule(){
         conds = new List<Condition>();
+        action = new Action(HardActions.doNothing);
+    }
+
+    public Rule(List<Condition> pconds, Action paction){
+        conds = pconds;
+        action = paction;
     }
 
     public void addCondition(Conditions ptype, Objects pobject, int pnumber, Variables pvar, bool positive = true){
         conds.Add( new Condition(ptype, pobject, pnumber,pvar, positive) );
+    }
+
+    public void addCondition(Condition pcond){
+        conds.Add( pcond );
     }
 
     public void setAction(Action paction){
@@ -31,7 +41,7 @@ public class Rule{
     }
 
     public bool run(BehCharacter pchara){
-        for(int i=0 ; i< conds.Count ; ++i){
+        for(int i=0 ; i< conds.Count ; i++){
             if(!conds[i].evaluate(pchara)){
                 return false;
             }
