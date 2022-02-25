@@ -143,7 +143,7 @@ public class BehCharacter : MonoBehaviour
     }
 
     public void incVariable(Variables vari){
-        if(variables[(int)vari]<=9){
+        if(variables[(int)vari]<9){
             variables[(int)vari]++;
         } else{
             variables[(int)vari]=0;

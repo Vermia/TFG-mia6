@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 
 public enum SoftActions{
-    incVariable, decVariable, setVariable
+    setVariable, incVariable, decVariable
 }
 
 public class SoftAction{
@@ -33,5 +33,9 @@ public class SoftAction{
         }
     }
 
+    public SoftAction copy(){
+        SoftAction res = new SoftAction(softAction, affectedVariable, affectedNumber);
+        return res;
+    }
 
 }

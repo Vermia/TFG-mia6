@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using System.Linq;
 
 public class BehUIEdit : MonoBehaviour
 {
@@ -30,6 +31,10 @@ public class BehUIEdit : MonoBehaviour
     Dropdown actDropdown;
     Dropdown condDirDropdown;
     Dropdown actDirDropdown;
+
+    Dropdown softActTypeDropdown;
+    Dropdown softActVarDropdown;
+    Dropdown softActNumDropdown;
     Toggle condPositiveToggle;
 
     List<SoftAction> softActions;
@@ -52,6 +57,10 @@ public class BehUIEdit : MonoBehaviour
         condDirDropdown = GameObject.Find("RuleEditConditionDirDropdown").GetComponent<Dropdown>();
         actDirDropdown  = GameObject.Find("RuleEditActionDirDropdown").GetComponent<Dropdown>();
         condPositiveToggle = GameObject.Find("RuleEditPositiveRule").GetComponent<Toggle>();
+
+        softActTypeDropdown = GameObject.Find("RuleEditSoftActionTypeDropdown").GetComponent<Dropdown>();
+        softActVarDropdown  = GameObject.Find("RuleEditSoftActionVarDropdown").GetComponent<Dropdown>();
+        softActNumDropdown  = GameObject.Find("RuleEditSoftActionNumDropdown").GetComponent<Dropdown>();
 
 
         movingState=UIMovingState.movingR;
@@ -87,6 +96,15 @@ public class BehUIEdit : MonoBehaviour
         GameObject.Find("RuleEditPreviousSoftActionButton").GetComponent<Button>().onClick.AddListener( ()=>{previousSoftAction();} );
         GameObject.Find("RuleEditNewSoftActionButton").GetComponent<Button>().onClick.AddListener( ()=>{newSoftAction();} );
         GameObject.Find("RuleEditNextSoftActionButton").GetComponent<Button>().onClick.AddListener( ()=>{nextSoftAction();} );
+        GameObject.Find("RuleEditDeleteSoftActionButton").GetComponent<Button>().onClick.AddListener( ()=>{
+            softActions.RemoveAt(selectedSoftAction);
+            if(selectedSoftAction >= softActions.Count){
+                selectedSoftAction--;
+            }
+            if(softActions.Count==0){
+                selectedSoftAction=-1;
+            }
+        } );
 
         GameObject.Find("RuleEditNewRuleButton").GetComponent<Button>().onClick.AddListener( addCurrentNewRule );
         //GameObject.Find("RuleEditAddSoftActionButton").GetComponent<Button>().onClick.AddListener( addNewSoftActionPanel );
@@ -104,6 +122,10 @@ public class BehUIEdit : MonoBehaviour
         condDirDropdown.gameObject.SetActive(false);
         actDirDropdown.gameObject.SetActive(false);
 
+        softActTypeDropdown.onValueChanged.AddListener( softTypeValueChanged );
+        softActNumDropdown.onValueChanged.AddListener( refreshRule );
+        softActVarDropdown.onValueChanged.AddListener( refreshRule );
+
         softActions = new List<SoftAction>();
         selectedSoftAction=-1; //Will have -1 as long as there is no soft action.
 
@@ -112,6 +134,8 @@ public class BehUIEdit : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
+        takeDataFromSoftActionUI();
+        refreshRule(0);
 
         RectTransform rtrans = (RectTransform)GetComponentInParent(typeof(RectTransform));
         float scrW = Application.isEditor ? 2035f :  Screen.width;  //Segun si estamos en el editor de Unity o en ejecutable
@@ -152,6 +176,12 @@ public class BehUIEdit : MonoBehaviour
         }
 
         softActionCountText.text = (selectedSoftAction+1).ToString() + "/" + softActions.Count; //arrays DON'T start at zero. Sometimes.
+
+        if(softActions.Count==0){
+            softActNumDropdown.gameObject.SetActive(false);
+            softActVarDropdown.gameObject.SetActive(false);
+            softActTypeDropdown.gameObject.SetActive(false);
+        }
     }
 
     public void retractOrExpand(){
@@ -344,21 +374,22 @@ public class BehUIEdit : MonoBehaviour
         if(newcond!=null) newRuleShowcase.addCondition(newcond);
 
         //SoftAction
-        foreach(var s_act in softActions){
-            act.addSoftAction(s_act);
+        List<SoftAction> aux = new List<SoftAction>(softActions);
+        foreach(var i in aux){
+            act.addSoftAction(i.copy());
         }
         
         //HardAction
-        if(actDropdown.value == 0) newRuleShowcase.action.hardAction = HardActions.doNothing;
+        if(actDropdown.value == 0) act.hardAction = HardActions.doNothing;
         if(actDropdown.value==1){
             switch(actDirDropdown.value){
-                case 0: newRuleShowcase.action.hardAction = HardActions.moveRight; break;
-                case 1: newRuleShowcase.action.hardAction = HardActions.moveLeft;  break;
-                case 2: newRuleShowcase.action.hardAction = HardActions.moveUp;    break;
-                case 3: newRuleShowcase.action.hardAction = HardActions.moveDown;  break;
+                case 0: act.hardAction = HardActions.moveRight; break;
+                case 1: act.hardAction = HardActions.moveLeft;  break;
+                case 2: act.hardAction = HardActions.moveUp;    break;
+                case 3: act.hardAction = HardActions.moveDown;  break;
             }
         }
-        //newRuleShowcase.setAction(new Action( (HardActions)actDropdown ));
+        newRuleShowcase.setAction(act);
 
     }
 
@@ -403,44 +434,6 @@ public class BehUIEdit : MonoBehaviour
         updateRuleInfo();
     }
 
-    void addNewSoftActionPanel(){
-        /*GameObject parent = new GameObject();
-        parent.AddComponent( typeof(HorizontalLayoutGroup) );
-        parent.transform.SetParent( GameObject.Find("RuleEditSoftActionContent").transform );
-
-
-        GameObject typeDropdownGO = new GameObject();
-        typeDropdownGO.transform.SetParent( parent.transform );
-        Dropdown typeDropdown = (Dropdown) typeDropdownGO.AddComponent(typeof(Dropdown));
-        List<Dropdown.OptionData> types = new List<Dropdown.OptionData>();
-        types.Add( new Dropdown.OptionData("Dar valor"));
-        types.Add( new Dropdown.OptionData("Incrementar"));
-        types.Add( new Dropdown.OptionData("Decrementar"));
-        typeDropdown.AddOptions(types);
-
-        GameObject VarDropdownGO = new GameObject();
-        VarDropdownGO.transform.SetParent( parent.transform );
-        Dropdown VarDropdown = (Dropdown) VarDropdownGO.AddComponent(typeof(Dropdown));
-        List<Dropdown.OptionData> vars = new List<Dropdown.OptionData>();
-        vars.Add( new Dropdown.OptionData("A"));
-        vars.Add( new Dropdown.OptionData("B"));
-        vars.Add( new Dropdown.OptionData("C"));
-        vars.Add( new Dropdown.OptionData("D"));
-        vars.Add( new Dropdown.OptionData("E"));
-        vars.Add( new Dropdown.OptionData("F"));
-        typeDropdown.AddOptions(vars);
-
-        GameObject NumDropdownGO = new GameObject();
-        NumDropdownGO.transform.SetParent( parent.transform );
-        Dropdown NumDropdown = (Dropdown) NumDropdownGO.AddComponent(typeof(Dropdown));
-        List<Dropdown.OptionData> nums = new List<Dropdown.OptionData>();
-        for(int i=0 ; i<=9 ; i++){
-            nums.Add( new Dropdown.OptionData(i.ToString()));
-        }
-
-        softActions.Add( new SoftActionPanel(typeDropdown, VarDropdown, NumDropdown) );*/
-    }
-
     void togglePositiveRule(bool pos){
         refreshRule(0);
     }
@@ -453,11 +446,15 @@ public class BehUIEdit : MonoBehaviour
                 selectedSoftAction = softActions.Count - 1;
             }
         }
+
+        loadDataIntoSoftActionUI();
     }
 
     void newSoftAction(){
         softActions.Add(new SoftAction(SoftActions.setVariable, Variables.A, 0));
         selectedSoftAction = softActions.Count-1;
+
+        loadDataIntoSoftActionUI();
     }
 
     void nextSoftAction(){
@@ -467,16 +464,60 @@ public class BehUIEdit : MonoBehaviour
                 selectedSoftAction = 0;
             }
         }
+
+        loadDataIntoSoftActionUI(); 
     }
 
-    //get soft action data from code and load it into the dropdowns
-    void loadDataIntoSoftActionUI(int index){
-        
+    //get soft action data from the selected action and load it into the dropdowns
+    void loadDataIntoSoftActionUI(){
+        //Type
+        switch(softActions[selectedSoftAction].softAction){
+            case SoftActions.setVariable:
+                softActTypeDropdown.value = 0;
+                softActNumDropdown.gameObject.SetActive(true);
+                softActTypeDropdown.gameObject.SetActive(true);
+                softActVarDropdown.gameObject.SetActive(true);
+            break;
+            case SoftActions.incVariable:
+                softActTypeDropdown.value = 1;
+                softActNumDropdown.gameObject.SetActive(false);
+                softActTypeDropdown.gameObject.SetActive(true);
+                softActVarDropdown.gameObject.SetActive(true);
+            break;
+            case SoftActions.decVariable:
+                softActTypeDropdown.value = 2;
+                softActNumDropdown.gameObject.SetActive(false);
+                softActTypeDropdown.gameObject.SetActive(true);
+                softActVarDropdown.gameObject.SetActive(true);
+            break;
+        }
+
+        //Variable
+        softActVarDropdown.value = (int) softActions[selectedSoftAction].affectedVariable;
+
+        //Number
+        softActNumDropdown.value = softActions[selectedSoftAction].affectedNumber;
+           
     }
 
     //Take the data from the dropdowns to update softActions
-    void takeDataFromSoftActionUI(int index){
-
+    void takeDataFromSoftActionUI(){
+        if(selectedSoftAction!=-1){
+            softActions[selectedSoftAction].softAction = (SoftActions) softActTypeDropdown.value;
+            softActions[selectedSoftAction].affectedVariable = (Variables) softActVarDropdown.value;
+            softActions[selectedSoftAction].affectedNumber = softActNumDropdown.value;
+        }
+        
+    }
+    void softTypeValueChanged(int num){
+        if(num == 0){ // SET
+            softActNumDropdown.gameObject.SetActive(true);
+        } else{ //INC Y DEC
+            softActNumDropdown.gameObject.SetActive(false);
+        }
+        refreshRule(0);
     }
 
+    
 }
+
