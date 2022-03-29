@@ -5,13 +5,12 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using System.Linq;
 
-public class BehUIEdit : MonoBehaviour
-{
+public class BehUIEdit : MonoBehaviour{
 
     public UIMovingState movingState;
     float wholeSeconds;
     float UIWidth;
-    BehCharacter player;
+    public BehCharacter player;
 
     Text A_value;
     Text B_value;
@@ -21,6 +20,7 @@ public class BehUIEdit : MonoBehaviour
     Text F_value;
 
     Text softActionCountText;
+    Text conditionCountText;
 
     Rule newRuleShowcase;
 
@@ -40,9 +40,10 @@ public class BehUIEdit : MonoBehaviour
     List<SoftAction> softActions;
     int selectedSoftAction;
 
+    List<Condition> conds;
+    int selectedCondition;
 
 
-    // Start is called before the first frame update
     void Start(){
         condDropdown = GameObject.Find("RuleEditConditionDropdown").GetComponent<Dropdown>();
         condDropdown.onValueChanged.AddListener( condDropdownListener );
@@ -92,6 +93,19 @@ public class BehUIEdit : MonoBehaviour
         GameObject.Find("EditD_down").GetComponent<Button>().onClick.AddListener( ()=>{player.decVariable(Variables.D);} );
         GameObject.Find("EditE_down").GetComponent<Button>().onClick.AddListener( ()=>{player.decVariable(Variables.E);} );
         GameObject.Find("EditF_down").GetComponent<Button>().onClick.AddListener( ()=>{player.decVariable(Variables.F);} );
+
+        GameObject.Find("RuleEditPreviousConditionButton").GetComponent<Button>().onClick.AddListener( ()=>{previousCondition();} );
+        GameObject.Find("RuleEditNewConditionButton").GetComponent<Button>().onClick.AddListener( ()=>{newCondition();} );
+        GameObject.Find("RuleEditNextConditionButton").GetComponent<Button>().onClick.AddListener( ()=>{nextCondition();} );
+        GameObject.Find("RuleEditDeleteConditionButton").GetComponent<Button>().onClick.AddListener( ()=>{
+            conds.RemoveAt(selectedCondition);
+            if(selectedCondition >= conds.Count){
+                selectedCondition--;
+            }
+            if(conds.Count==0){
+                selectedCondition=-1;
+            }
+        } );
         
         GameObject.Find("RuleEditPreviousSoftActionButton").GetComponent<Button>().onClick.AddListener( ()=>{previousSoftAction();} );
         GameObject.Find("RuleEditNewSoftActionButton").GetComponent<Button>().onClick.AddListener( ()=>{newSoftAction();} );
@@ -127,9 +141,13 @@ public class BehUIEdit : MonoBehaviour
         softActVarDropdown.onValueChanged.AddListener( refreshRule );
 
         softActions = new List<SoftAction>();
-        selectedSoftAction=-1; //Will have -1 as long as there is no soft action.
+        selectedSoftAction = -1; //Will have -1 as long as there is no soft action.
+
+        conds = new List<Condition>();
+        selectedCondition = -1;
 
         softActionCountText = GameObject.Find("RuleEditSoftActionCount").GetComponent<Text>();
+        conditionCountText = GameObject.Find("RuleEditConditionCount").GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -176,6 +194,7 @@ public class BehUIEdit : MonoBehaviour
         }
 
         softActionCountText.text = (selectedSoftAction+1).ToString() + "/" + softActions.Count; //arrays DON'T start at zero. Sometimes.
+        conditionCountText.text = (selectedCondition+1).ToString() + "/" + conds.Count;
 
         if(softActions.Count==0){
             softActNumDropdown.gameObject.SetActive(false);
@@ -193,7 +212,7 @@ public class BehUIEdit : MonoBehaviour
         }
     }
 
-    void updateRuleInfo(){
+    public void updateRuleInfo(){
         
         //name_value.text = ;
 
@@ -262,7 +281,11 @@ public class BehUIEdit : MonoBehaviour
 
         }
 
-        
+        //??????
+        //BehUIRule infoRight = GameObject.Find("UICanvasImageRight").GetComponent<BehUIRule>();
+        //infoRight.updateValues();
+        //infoRight.updateRuleInfo();
+        //infoRight.updateInventory();
     }
 
     public static GameObject createButton(GameObject parent, Vector2 pos, Vector2 size, Color color, UnityAction action ){
@@ -360,6 +383,9 @@ public class BehUIEdit : MonoBehaviour
             case 1:
                 actDirDropdown.gameObject.SetActive(true);
             break;
+            case 2:
+                actDirDropdown.gameObject.SetActive(true);
+            break;
         }
         obtainNewRuleValues();
         reformulateNewRule();
@@ -387,6 +413,14 @@ public class BehUIEdit : MonoBehaviour
                 case 1: act.hardAction = HardActions.moveLeft;  break;
                 case 2: act.hardAction = HardActions.moveUp;    break;
                 case 3: act.hardAction = HardActions.moveDown;  break;
+            }
+        }
+        if(actDropdown.value==2){
+            switch(actDirDropdown.value){
+                case 0: act.hardAction = HardActions.shootRight; break;
+                case 1: act.hardAction = HardActions.shootLeft;  break;
+                case 2: act.hardAction = HardActions.shootUp;    break;
+                case 3: act.hardAction = HardActions.shootDown;  break;
             }
         }
         newRuleShowcase.setAction(act);
@@ -500,6 +534,52 @@ public class BehUIEdit : MonoBehaviour
            
     }
 
+    void loadDataIntoConditionUI(){
+        //Type
+        switch(conds[selectedCondition].type){
+            case Conditions.see:
+                condDropdown.value = 0;
+                condDirDropdown.gameObject.SetActive(true);
+                condObjDropdown.gameObject.SetActive(true);
+                condVarDropdown.gameObject.SetActive(false);
+                condNumDropdown.gameObject.SetActive(false);
+            break;
+            case Conditions.numberEqualTo:
+                condDropdown.value = 1;
+                condDirDropdown.gameObject.SetActive(false);
+                condObjDropdown.gameObject.SetActive(false);
+                condVarDropdown.gameObject.SetActive(true);
+                condNumDropdown.gameObject.SetActive(true);
+            break;
+            case Conditions.numberMoreThan:
+                condDropdown.value = 2;
+                condDirDropdown.gameObject.SetActive(false);
+                condObjDropdown.gameObject.SetActive(false);
+                condVarDropdown.gameObject.SetActive(true);
+                condNumDropdown.gameObject.SetActive(true);
+            break;
+            case Conditions.numberLessThan:
+                condDropdown.value = 3;
+                condDirDropdown.gameObject.SetActive(false);
+                condObjDropdown.gameObject.SetActive(false);
+                condVarDropdown.gameObject.SetActive(true);
+                condNumDropdown.gameObject.SetActive(true);
+            break;
+        }
+
+        //Variable
+        condVarDropdown.value = (int) conds[selectedCondition].affectedVariable;
+
+        //Number
+        condNumDropdown.value = conds[selectedCondition].affectedNumber;
+
+        //Object
+        condObjDropdown.value = (int) conds[selectedCondition].affectedObject;
+        
+        //Positive?
+        condPositiveToggle.isOn = conds[selectedCondition].positive;
+    }
+
     //Take the data from the dropdowns to update softActions
     void takeDataFromSoftActionUI(){
         if(selectedSoftAction!=-1){
@@ -518,6 +598,49 @@ public class BehUIEdit : MonoBehaviour
         refreshRule(0);
     }
 
+    public void reset(){
+        condDropdown.value=0;
+        condNumDropdown.value=0;
+        condObjDropdown.value=0;
+        condVarDropdown.value=0;
+        actDropdown.value=0;
+        condDirDropdown.value=0;
+        actDirDropdown.value=0;
+
+        softActions.Clear();
+        var content = GameObject.Find("EditRuleContent");
+
+
+    }
+
+    void previousCondition(){
+        if(conds.Count > 1){
+            selectedCondition--;
+            if(selectedCondition < 0){
+                selectedCondition = softActions.Count - 1;
+            }
+        }
+
+        loadDataIntoConditionUI();
+    }
+
+    void newCondition(){
+        conds.Add(new Condition(Conditions.see, Objects.player, 0, Variables.A));
+        selectedCondition = softActions.Count-1;
+
+        loadDataIntoConditionUI();
+    }
+
+    void nextCondition(){
+        if(conds.Count > 1){
+            selectedCondition++;
+            if(selectedCondition >= conds.Count){
+                selectedCondition = 0;
+            }
+        }
+
+        loadDataIntoConditionUI(); 
+    }
     
 }
 

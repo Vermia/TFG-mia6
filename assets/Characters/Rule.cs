@@ -5,9 +5,7 @@ using UnityEngine.UI;
 
 
 
-public enum Objects{
-    player, wall
-}
+
 
 public enum Variables{
     A,B,C,D,E,F

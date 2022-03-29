@@ -56,7 +56,7 @@ public class BehSquare : MonoBehaviour
 
     void setOccupant(GameObject poccupant){
         occupant = poccupant;
-        transform.position = new Vector2( occupant.transform.position.x, occupant.transform.position.y );
+        //transform.position = new Vector2( occupant.transform.position.x, occupant.transform.position.y );
     }
 }
 

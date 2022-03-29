@@ -27,7 +27,7 @@ public class RuleBuilder{
     }
 
     public void reset(){
-        currentRule=new Rule();
+        currentRule = new Rule();
     }
 
     public Rule get(){

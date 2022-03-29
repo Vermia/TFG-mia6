@@ -30,17 +30,74 @@ public class Condition{
             BehSquare squareOfCharacter = chara.GetComponent<BehCharacter>().currentSquare.GetComponent<BehSquare>();
 
             switch(affectedNumber){
-                case 0:
+                case 0: //derecha
                     otherObject = BehBoard.getObjectInSquare(squareOfCharacter.i+1, squareOfCharacter.j);
                     if(otherObject && otherObject.GetComponent<BehCharacter>().objectType == affectedObject){
                         res = true;
                     }
                 break;
-                case 1:
-                    
+                case 1: //arriba derecha
+                     otherObject = BehBoard.getObjectInSquare(squareOfCharacter.i+1, squareOfCharacter.j-1);
+                    if(otherObject && otherObject.GetComponent<BehCharacter>().objectType == affectedObject){
+                        res = true;
+                    }
                 break;
-                case 2:
+                case 2: //arriba
                     otherObject = BehBoard.getObjectInSquare(squareOfCharacter.i, squareOfCharacter.j-1);
+                    if(otherObject && otherObject.GetComponent<BehCharacter>().objectType == affectedObject){
+                        res = true;
+                    }
+                break;
+                case 3: //arriba izquierda
+                    otherObject = BehBoard.getObjectInSquare(squareOfCharacter.i-1, squareOfCharacter.j-1);
+                    if(otherObject && otherObject.GetComponent<BehCharacter>().objectType == affectedObject){
+                        res = true;
+                    }
+                break;
+                case 4: //izquierda
+                    otherObject = BehBoard.getObjectInSquare(squareOfCharacter.i-1, squareOfCharacter.j);
+                    if(otherObject && otherObject.GetComponent<BehCharacter>().objectType == affectedObject){
+                        res = true;
+                    }
+                break;
+                case 5: //abajo izquierda
+                    otherObject = BehBoard.getObjectInSquare(squareOfCharacter.i-1, squareOfCharacter.j+1);
+                    if(otherObject && otherObject.GetComponent<BehCharacter>().objectType == affectedObject){
+                        res = true;
+                    }
+                break;
+                case 6: //abajo
+                    otherObject = BehBoard.getObjectInSquare(squareOfCharacter.i, squareOfCharacter.j+1);
+                    if(otherObject && otherObject.GetComponent<BehCharacter>().objectType == affectedObject){
+                        res = true;
+                    }
+                break;
+                case 7: //abajo derecha
+                    otherObject = BehBoard.getObjectInSquare(squareOfCharacter.i+1, squareOfCharacter.j+1);
+                    if(otherObject && otherObject.GetComponent<BehCharacter>().objectType == affectedObject){
+                        res = true;
+                    }
+                break;
+                case 8: //lejos derecha
+                    otherObject = BehBoard.getObjectInSquare(squareOfCharacter.i+2, squareOfCharacter.j);
+                    if(otherObject && otherObject.GetComponent<BehCharacter>().objectType == affectedObject){
+                        res = true;
+                    }
+                break;
+                case 9: //lejos arriba
+                    otherObject = BehBoard.getObjectInSquare(squareOfCharacter.i, squareOfCharacter.j-2);
+                    if(otherObject && otherObject.GetComponent<BehCharacter>().objectType == affectedObject){
+                        res = true;
+                    }
+                break;
+                case 10: //lejos izquierda
+                    otherObject = BehBoard.getObjectInSquare(squareOfCharacter.i-2, squareOfCharacter.j);
+                    if(otherObject && otherObject.GetComponent<BehCharacter>().objectType == affectedObject){
+                        res = true;
+                    }
+                break;
+                case 11: //lejos abajo
+                    otherObject = BehBoard.getObjectInSquare(squareOfCharacter.i, squareOfCharacter.j+2);
                     if(otherObject && otherObject.GetComponent<BehCharacter>().objectType == affectedObject){
                         res = true;
                     }

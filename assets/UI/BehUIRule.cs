@@ -89,19 +89,21 @@ public class BehUIRule : MonoBehaviour
             break;
         }
 
-        updateValues();
+        if(BehBoard.newTurn){
+            updateValues();
+            updateRuleInfo();
+            updateInventory();
+        }
     }
 
     public void newRuleInfo(BehCharacter pnewSource){
         infoSource=pnewSource;
         updateValues();
         updateRuleInfo();
+        updateInventory();
     }
 
-    void updateRuleInfo(){
-        
-        //name_value.text = ;
-
+    public void updateRuleInfo(){
         //Limpiar reglas
         var content = GameObject.Find("RuleContent");
         var auxList = new List<GameObject>();
@@ -130,15 +132,62 @@ public class BehUIRule : MonoBehaviour
             else condText = "";
 
 
-                GameObject condTextGO = createText(newImg, new Vector2(10,-70), condText, new Color(0,0,1,1), 30);
-                condTextGO.GetComponent<Text>().horizontalOverflow=HorizontalWrapMode.Wrap;
-                condTextGO.GetComponent<RectTransform>().anchorMin = new Vector2(0,1);
-                condTextGO.GetComponent<RectTransform>().anchorMax = new Vector2(0,1);
-                condTextGO.GetComponent<RectTransform>().pivot = new Vector2(0,1);
-                condTextGO.GetComponent<RectTransform>().sizeDelta = new Vector2(190,110);
+            GameObject condTextGO = createText(newImg, new Vector2(10,-70), condText, new Color(0,0,1,1), 30);
+            condTextGO.GetComponent<Text>().horizontalOverflow=HorizontalWrapMode.Wrap;
+            condTextGO.GetComponent<RectTransform>().anchorMin = new Vector2(0,1);
+            condTextGO.GetComponent<RectTransform>().anchorMax = new Vector2(0,1);
+            condTextGO.GetComponent<RectTransform>().pivot = new Vector2(0,1);
+            condTextGO.GetComponent<RectTransform>().sizeDelta = new Vector2(190,110);
 
+            //Acciones
             string actText = calculateActionText(rule.action);
             GameObject actTextGO = createText(newImg, new Vector2(270,-70), actText, new Color(0,0,1,1), 20);
+            actTextGO.GetComponent<Text>().horizontalOverflow=HorizontalWrapMode.Wrap;
+            actTextGO.GetComponent<RectTransform>().anchorMin = new Vector2(0,1);
+            actTextGO.GetComponent<RectTransform>().anchorMax = new Vector2(0,1);
+            actTextGO.GetComponent<RectTransform>().pivot = new Vector2(0,1);
+            actTextGO.GetComponent<RectTransform>().sizeDelta = new Vector2(210,110);
+        }
+    }
+
+    public void updateInventory(){
+        //Limpiar reglas
+        var content = GameObject.Find("InventoryContent");
+        var auxList = new List<GameObject>();
+        foreach(Transform child in content.transform){
+            auxList.Add(child.gameObject);
+        }
+        auxList.ForEach(child => Destroy(child));
+
+        //Nuevas reglas
+        foreach(Item item in infoSource.inventory){
+            //Imagen de fondo de cada regla
+            GameObject newImg = new GameObject();
+            newImg.AddComponent(typeof(Image));
+            newImg.transform.SetParent(content.transform);
+            newImg.transform.localScale = new Vector3(1,1,0);
+            newImg.GetComponent<RectTransform>().sizeDelta = new Vector2(265,100);
+
+            //Item
+            string typeText="";
+            switch(item.type){
+                case ItemTypes.gun:
+                    typeText="Pistola";
+                break;
+            }
+
+            string chargesText = item.charges.ToString();
+
+
+            GameObject condTextGO = createText(newImg, new Vector2(10,0), typeText, new Color(0,0,1,1), 30);
+            condTextGO.GetComponent<Text>().horizontalOverflow=HorizontalWrapMode.Wrap;
+            condTextGO.GetComponent<RectTransform>().anchorMin = new Vector2(0,1);
+            condTextGO.GetComponent<RectTransform>().anchorMax = new Vector2(0,1);
+            condTextGO.GetComponent<RectTransform>().pivot = new Vector2(0,1);
+            condTextGO.GetComponent<RectTransform>().sizeDelta = new Vector2(190,110);
+
+            //Acciones
+            GameObject actTextGO = createText(newImg, new Vector2(150,0), chargesText, new Color(0,0,1,1), 30);
             actTextGO.GetComponent<Text>().horizontalOverflow=HorizontalWrapMode.Wrap;
             actTextGO.GetComponent<RectTransform>().anchorMin = new Vector2(0,1);
             actTextGO.GetComponent<RectTransform>().anchorMax = new Vector2(0,1);
@@ -184,6 +233,7 @@ public class BehUIRule : MonoBehaviour
         txtCondition.transform.localScale = new Vector2(1,1); //????????
         txtCondition.GetComponent<RectTransform>().localPosition = new Vector2(pos.x, pos.y);
         txtConditionComp.horizontalOverflow = HorizontalWrapMode.Overflow;
+        txtConditionComp.resizeTextForBestFit=true;
         
         return txtCondition;
     }
@@ -229,14 +279,20 @@ public class BehUIRule : MonoBehaviour
             }
 
             switch(cond.affectedNumber){
-                case 0: res+="a mi derecha";   break;
-                case 2: res+="arriba de mí";   break;
-                case 4: res+="a mi izquierda"; break;
-                case 6: res+="debajo de mí";   break;
+                case 0:  res+="a mi derecha";                   break;
+                case 1:  res+="arriba a la derecha";            break;
+                case 2:  res+="arriba de mí";                   break;
+                case 3:  res+="arriba a la izquierda";          break;
+                case 4:  res+="a mi izquierda";                 break;
+                case 5:  res+="abajo a la izquierda";           break;
+                case 6:  res+="debajo de mí";                   break;
+                case 7:  res+="abajo a la derecha";             break;
+                case 8:  res+="dos casillas a mi derecha";      break;
+                case 9:  res+="dos casillas arriba de mí";      break;
+                case 10: res+="dos casillas a mi izquierda";    break;
+                case 11: res+="dos casillas debajo de mi";      break;
             }
         }
-
-        
 
         return res;
     }
@@ -274,6 +330,10 @@ public class BehUIRule : MonoBehaviour
             case HardActions.moveUp:    res += "Me muevo hacia arriba"; break;
             case HardActions.moveLeft:  res += "Me muevo a mi izquierda"; break;
             case HardActions.moveDown:  res += "Me muevo hacia abajo"; break;
+            case HardActions.shootRight:  res += "Disparo hacia la derecha"; break;
+            case HardActions.shootUp:  res += "Disparo hacia arriba"; break;
+            case HardActions.shootLeft:  res += "Disparo hacia la izquierda"; break;
+            case HardActions.shootDown:  res += "Disparo hacia abajo"; break;
             case HardActions.doNothing: res += "No hago nada"; break;
 
             default: break;

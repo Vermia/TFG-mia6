@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class BehUIAbove : MonoBehaviour
 {
-
     Text hp1;
     Text hp2;
     Text points1;
@@ -22,11 +21,13 @@ public class BehUIAbove : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
-        BehCharacter player1 = BehBoard.player1.GetComponent<BehCharacter>();
-        BehCharacter player2 = BehBoard.player2.GetComponent<BehCharacter>();
-        hp1.text = player1.currHP.ToString() + "/" + player1.maxHP.ToString();
-        hp2.text = player2.currHP.ToString() + "/" + player2.maxHP.ToString();
-        points1.text = player1.currStars.ToString() + "/" + player1.maxStars.ToString();
-        points2.text = player2.currStars.ToString() + "/" + player2.maxStars.ToString();
+        if(BehBoard.gameActive){
+            BehCharacter player1 = BehBoard.player1.GetComponent<BehCharacter>();
+            BehCharacter player2 = BehBoard.player2.GetComponent<BehCharacter>();
+            hp1.text = player1.currHP.ToString() + "/" + player1.maxHP.ToString();
+            hp2.text = player2.currHP.ToString() + "/" + player2.maxHP.ToString();
+            points1.text = player1.currStars.ToString() + "/" + player1.maxStars.ToString();
+            points2.text = player2.currStars.ToString() + "/" + player2.maxStars.ToString();
+        }
     }
 }
