@@ -153,6 +153,7 @@ public class BehUIEdit : MonoBehaviour{
     // Update is called once per frame
     void Update(){
         takeDataFromSoftActionUI();
+        takeDataFromConditionUI();
         refreshRule(0);
 
         RectTransform rtrans = (RectTransform)GetComponentInParent(typeof(RectTransform));
@@ -212,6 +213,7 @@ public class BehUIEdit : MonoBehaviour{
         }
     }
 
+    //All rules for the player (left side of the menu)
     public void updateRuleInfo(){
         
         //name_value.text = ;
@@ -351,19 +353,14 @@ public class BehUIEdit : MonoBehaviour{
         //}
 
         switch(value){
-            case 0:
-                condNumDropdown.gameObject.SetActive(false);
-                condVarDropdown.gameObject.SetActive(false);
-                condObjDropdown.gameObject.SetActive(false);
-                condDirDropdown.gameObject.SetActive(false);
-            break;
-            case 1: //See
+            
+            case 0: //See
                 condNumDropdown.gameObject.SetActive(false);
                 condVarDropdown.gameObject.SetActive(false);
                 condObjDropdown.gameObject.SetActive(true);
                 condDirDropdown.gameObject.SetActive(true);
             break;
-            case 2: case 3: case 4: //NumberEqualTo, NumberLessThan, NumberMoreThan
+            case 1: case 2: case 3: //NumberEqualTo, NumberLessThan, NumberMoreThan
                 condNumDropdown.gameObject.SetActive(true);
                 condVarDropdown.gameObject.SetActive(true);
                 condObjDropdown.gameObject.SetActive(false);
@@ -433,6 +430,7 @@ public class BehUIEdit : MonoBehaviour{
     }
 
     Condition obtainCondFromValues(){
+        /////NECESITA REFACTORIZAR!!!!!!
         Conditions type = Conditions.numberEqualTo;
         Objects obj = Objects.player;
         int number=0;
@@ -440,16 +438,15 @@ public class BehUIEdit : MonoBehaviour{
         bool pos;
         
         switch(condDropdown.value){
-            case 0: return null;
-            case 1: //SEE
+            case 0: //SEE
                 type = Conditions.see;
                 number = condDirDropdown.value;
                 obj = (Objects) condObjDropdown.value;
             break;  
-            case 2: case 3: case 4:
-                if(condDropdown.value == 2) type=Conditions.numberMoreThan; 
-                else if(condDropdown.value == 3) type=Conditions.numberLessThan; 
-                else if(condDropdown.value == 4) type=Conditions.numberEqualTo;
+            case 1: case 2: case 3:
+                if(condDropdown.value == 1) type=Conditions.numberEqualTo; 
+                else if(condDropdown.value == 2) type=Conditions.numberMoreThan; 
+                else if(condDropdown.value == 3) type=Conditions.numberLessThan;
                 number = condNumDropdown.value;
                 vari = (Variables) condVarDropdown.value;
             break;
@@ -589,6 +586,16 @@ public class BehUIEdit : MonoBehaviour{
         }
         
     }
+
+    void takeDataFromConditionUI(){
+        if(selectedCondition!=-1){
+            conds[selectedCondition].type = (Conditions) condDropdown.value;
+            conds[selectedCondition].affectedVariable = (Variables) condVarDropdown.value;
+            conds[selectedCondition].affectedNumber = condNumDropdown.value;
+            conds[selectedCondition].affectedObject = (Objects) condObjDropdown.value;
+        }
+        
+    }
     void softTypeValueChanged(int num){
         if(num == 0){ // SET
             softActNumDropdown.gameObject.SetActive(true);
@@ -626,7 +633,7 @@ public class BehUIEdit : MonoBehaviour{
 
     void newCondition(){
         conds.Add(new Condition(Conditions.see, Objects.player, 0, Variables.A));
-        selectedCondition = softActions.Count-1;
+        selectedCondition = conds.Count-1;
 
         loadDataIntoConditionUI();
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public enum Conditions{
-    see, numberEqualTo, numberLessThan, numberMoreThan
+    see, numberEqualTo, numberMoreThan, numberLessThan
 }
 
 public enum seeDirections{
