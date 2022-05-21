@@ -11,6 +11,12 @@ public class BehBoard : MonoBehaviour
     public GameObject squareEmpty;
     public GameObject character;
     public Sprite wallSprite;
+    public Sprite RedPlayer;
+    public Sprite BluePlayer;
+    public Sprite Pickup;
+    public Sprite StarSprite;
+    public Sprite bulletSprite;
+    public Sprite breakableSprite;
 
     static public GameObject[,] board{get; private set;}
     static public List<GameObject> things{get; private set;}
@@ -37,7 +43,7 @@ public class BehBoard : MonoBehaviour
         newTurn=true;
         turnTimer=0f;
         
-        generateMap();
+        generateMap(1);
     }
 
     // Update is called once per frame
@@ -53,7 +59,7 @@ public class BehBoard : MonoBehaviour
                 turnTimer -= Time.deltaTime;
             }
 
-            if(currentTurn >= 40){
+            if(currentTurn >= 60){
                 forceEnd();
             }
             turnText.text = currentTurn.ToString();
@@ -64,6 +70,12 @@ public class BehBoard : MonoBehaviour
             if(player2.GetComponent<BehCharacter>().currHP <= 0){
                 victory();
             }
+            if(player1.GetComponent<BehCharacter>().currStars >= player1.GetComponent<BehCharacter>().maxStars){
+                victory();
+            }
+            if(player2.GetComponent<BehCharacter>().currStars >= player2.GetComponent<BehCharacter>().maxStars){
+                defeat();
+            }
             if(Input.GetKeyDown(KeyCode.X)){
                 victory();
             }
@@ -72,7 +84,7 @@ public class BehBoard : MonoBehaviour
 
     public static void startGame(){
         if(board==null){
-            GameObject.Find("Board").GetComponent<BehBoard>().generateMap();
+            GameObject.Find("Board").GetComponent<BehBoard>().generateMap(0);
             gameActive = false;
         }
         else{
@@ -116,27 +128,12 @@ public class BehBoard : MonoBehaviour
         return newObj;
     }
 
-    public GameObject createBullet(int i, int j, seeDirections dir, GameObject source){
+    public GameObject createBullet(int i, int j, Dir4 dir, GameObject source){
         GameObject newObj = createObject(i, j);
 
-        Action act = new Action(HardActions.doNothing);
-        switch(dir){
-            case seeDirections.right:
-                act.hardAction = HardActions.moveRight;
-            break;
-            case seeDirections.up:
-                act.hardAction = HardActions.moveUp;
-            break;
-            case seeDirections.left:
-                act.hardAction = HardActions.moveLeft;
-            break;
-            case seeDirections.down:
-                act.hardAction = HardActions.moveDown;
-            break;
-        }
-        Rule rule = new Rule();
-        rule.setAction(act);
-        newObj.GetComponent<BehCharacter>().addRule(rule);
+        Action act = new Action(HardActions.move, dir);
+       
+        //newObj.GetComponent<BehCharacter>().
 
         newObj.GetComponent<BehCharacter>().objectType = Objects.projectile;
 
@@ -144,6 +141,7 @@ public class BehBoard : MonoBehaviour
 
         newObj.GetComponent<BehCharacter>().currHP = 15; //Bullet HP = Damage dealt
         newObj.GetComponent<BehCharacter>().source = source;
+        newObj.GetComponent<SpriteRenderer>().sprite = bulletSprite;
 
         return newObj;
     }
@@ -153,6 +151,32 @@ public class BehBoard : MonoBehaviour
 
         newObj.GetComponent<BehCharacter>().obtainItem(ItemTypes.gun, 5);
         newObj.GetComponent<BehCharacter>().objectType = Objects.pickup;
+        newObj.GetComponent<SpriteRenderer>().sprite = Pickup;
+        
+
+        return newObj;
+    }
+
+    public GameObject createStarsPickup(int i, int j, int amount){
+        GameObject newObj = createObject(i, j);
+
+        newObj.GetComponent<BehCharacter>().obtainItem(ItemTypes.stars, amount);
+        newObj.GetComponent<BehCharacter>().objectType = Objects.pickup;
+        newObj.GetComponent<SpriteRenderer>().sprite = StarSprite;
+
+        return newObj;
+    }
+
+    public GameObject createBreakableWall(int i, int j, int HP){
+        GameObject newObj = createObject(i, j);
+
+        
+        newObj.GetComponent<BehCharacter>().objectType = Objects.breakablewall;
+        newObj.GetComponent<BehCharacter>().maxHP = HP;
+        newObj.GetComponent<BehCharacter>().currHP = HP;
+        newObj.GetComponent<SpriteRenderer>().sprite = breakableSprite;
+        newObj.name= "Muro rompible";
+
 
         return newObj;
     }
@@ -182,75 +206,14 @@ public class BehBoard : MonoBehaviour
 
 
 
-    void generateMap(){
-        widthInSquares=10;
-        heightInSquares=7;
-        board = new GameObject[widthInSquares, heightInSquares];
-        things = new List<GameObject>();
-
-        Destroy(StateText);
-        StateText=null;
-
-        for(int i=0 ; i<widthInSquares ; i++){
-            for(int j=0 ; j<heightInSquares ; j++){
-                board[i,j] = Instantiate(squareEmpty);
-                board[i,j].transform.position = new Vector2( i*squareWH, -j*squareWH );
-                board[i,j].SendMessage("setPosition", new Vector2i(i,j));
-                if(i==2 && j==5){
-                    things.Add(Instantiate(character));
-                    int last = things.Count-1;
-                    things[last].transform.position = new Vector2( i*squareWH, -j*squareWH );
-                    board[i,j].SendMessage("setOccupant", things[last]);
-                    BehCharacter behlast = things[last].GetComponent<BehCharacter>();
-                    behlast.currentSquare = board[i,j];
-                    behlast.targetSquare  = board[i,j];
-
-                    behlast.objectType=Objects.player;
-                    behlast.nombre="Jugador1";
-
-                    things[last].GetComponent<SpriteRenderer>().color = new Color(0,1,1,1);
-
-                    player1 = things[last];
-                    GameObject.Find("UICanvasImageEdit").GetComponent<BehUIEdit>().player = player1.GetComponent<BehCharacter>();
-                    GameObject.Find("UICanvasImageEdit").GetComponent<BehUIEdit>().updateRuleInfo();
-
-
-                }
-                if(i==1 && j==3){
-                    things.Add(Instantiate(character));
-                    int last = things.Count-1;
-                    things[last].transform.position = new Vector2( i*squareWH, -j*squareWH );
-                    board[i,j].SendMessage("setOccupant", things[last]);
-
-                    BehCharacter behlast = things[last].GetComponent<BehCharacter>();
-                    behlast.currentSquare = board[i,j];
-                    behlast.targetSquare  = board[i,j];
-
-                    behlast.obtainItem(ItemTypes.gun, 5);
-                    
-                    Rule r2 = new Rule();
-                    Action action = new Action(HardActions.moveRight);
-                    action.addSoftAction(SoftActions.incVariable, Variables.A);
-                    action.affectedItem=ItemTypes.gun;
-                    r2.setAction( action );
-                    behlast.addRule(r2);
-                    behlast.objectType=Objects.player;
-
-                    things[last].GetComponent<SpriteRenderer>().color = new Color(1,0,0,1);
-                    behlast.nombre="Jugador2";
-                    player2 = things[last];
-                }
-
-                
-
-                if(i==0 || j==0 || i==board.GetLength(0)-1 || j == board.GetLength(1)-1){
-                    createWall(i,j);
-                }
-                
-            }
+    void generateMap(int seed){
+        if(seed==0){
+            map1();
         }
-        createWall(7,2); createWall(7,3); createWall(3,1);
-        createGunPickup(4,5,   5);
+        else if(seed==1){
+            map2();
+        }
+        
     }
 
 
@@ -281,6 +244,127 @@ public class BehBoard : MonoBehaviour
         }
         board=null;
         GameObject.Find("UICanvasImageEdit").GetComponent<BehUIEdit>().reset();
+    }
+
+    ////MAPS
+
+    void map1(){
+        prepMap(10,7);
+
+        for(int i=0 ; i<widthInSquares ; i++){
+            for(int j=0 ; j<heightInSquares ; j++){
+                board[i,j] = Instantiate(squareEmpty);
+                board[i,j].transform.position = new Vector2( i*squareWH, -j*squareWH );
+                board[i,j].SendMessage("setPosition", new Vector2i(i,j));
+                if(i==2 && j==5){
+                    things.Add(Instantiate(character));
+                    int last = things.Count-1;
+                    things[last].transform.position = new Vector2( i*squareWH, -j*squareWH );
+                    board[i,j].SendMessage("setOccupant", things[last]);
+                    BehCharacter behlast = things[last].GetComponent<BehCharacter>();
+                    behlast.currentSquare = board[i,j];
+                    behlast.targetSquare  = board[i,j];
+
+                    behlast.objectType=Objects.player;
+                    behlast.nombre="Jugador1";
+
+                    things[last].GetComponent<SpriteRenderer>().sprite = BluePlayer;
+
+                    player1 = things[last];
+                    GameObject.Find("UICanvasImageEdit").GetComponent<BehUIEdit>().player = player1.GetComponent<BehCharacter>();
+                    GameObject.Find("UICanvasImageEdit").GetComponent<BehUIEdit>().updateRuleInfo();
+
+
+                }
+                
+
+                
+
+                if(i==0 || j==0 || i==board.GetLength(0)-1 || j == board.GetLength(1)-1){
+                    createWall(i,j);
+                }
+                
+            }
+        }
+        createWall(7,2); createWall(7,3); createWall(3,1);
+        createGunPickup(4,5,   5);
+        createStarsPickup(1,1,100);
+    }
+
+    void map2(){
+        prepMap(17,9);
+        GameObject.Find("Main Camera").transform.position = new Vector2(9.50f, -4f);
+
+        for(int i=0 ; i<widthInSquares ; i++){
+            for(int j=0 ; j<heightInSquares ; j++){
+                board[i,j] = Instantiate(squareEmpty);
+                board[i,j].transform.position = new Vector2( i*squareWH, -j*squareWH );
+                board[i,j].SendMessage("setPosition", new Vector2i(i,j));
+                if(i==2 && j==5){
+                    things.Add(Instantiate(character));
+                    int last = things.Count-1;
+                    things[last].transform.position = new Vector2( i*squareWH, -j*squareWH );
+                    board[i,j].SendMessage("setOccupant", things[last]);
+                    BehCharacter behlast = things[last].GetComponent<BehCharacter>();
+                    behlast.currentSquare = board[i,j];
+                    behlast.targetSquare  = board[i,j];
+
+                    behlast.objectType=Objects.player;
+                    behlast.nombre="Jugador1";
+
+                    things[last].GetComponent<SpriteRenderer>().sprite = BluePlayer;
+
+                    player1 = things[last];
+                    GameObject.Find("UICanvasImageEdit").GetComponent<BehUIEdit>().player = player1.GetComponent<BehCharacter>();
+                    GameObject.Find("UICanvasImageEdit").GetComponent<BehUIEdit>().updateRuleInfo();
+
+
+                }
+                if(i==14 && j==6){
+                    things.Add(Instantiate(character));
+                    int last = things.Count-1;
+                    things[last].transform.position = new Vector2( i*squareWH, -j*squareWH );
+                    board[i,j].SendMessage("setOccupant", things[last]);
+
+                    BehCharacter behlast = things[last].GetComponent<BehCharacter>();
+                    behlast.currentSquare = board[i,j];
+                    behlast.targetSquare  = board[i,j];
+
+                    behlast.obtainItem(ItemTypes.gun, 5);
+                    behlast.addStatement(new Loop(1,new Action(HardActions.move, Dir4.up)));
+                    behlast.addStatement(new Loop(4,new Action(HardActions.move, Dir4.up)));
+                    behlast.addStatement(new Loop(3,new Action(HardActions.move, Dir4.up)));
+
+                    things[last].GetComponent<SpriteRenderer>().sprite = RedPlayer;
+                    behlast.nombre="Jugador2";
+                    player2 = things[last];
+                }
+
+                
+
+                if(i==0 || j==0 || i==board.GetLength(0)-1 || j == board.GetLength(1)-1){
+                    createWall(i,j);
+                }
+                
+            }
+        }
+        createWall(7,2); createWall(7,3); createWall(3,1); createWall(6,4); createWall(9,4); createWall(7,5); createWall(9,3); createWall(9,2); createWall(8,5);
+        createWall(11,3); createWall(12,3);createWall(2,2);createWall(1,6);createWall(2,6);createWall(13,2);createWall(14,2);createWall(14,1);
+        createGunPickup(4,5,   5);  createGunPickup(12,6,   5); 
+        createStarsPickup(1,1,25); createStarsPickup(10,5,25); createStarsPickup(6,7,25); createStarsPickup(15,7,25);createStarsPickup(7,4,75);
+        createStarsPickup(1,7,25);createStarsPickup(15,1,25);
+        createBreakableWall(8,3,40);
+
+    }
+
+    void prepMap(int width, int height){
+        widthInSquares=width;
+        heightInSquares=height;
+        board = new GameObject[widthInSquares, heightInSquares];
+        things = new List<GameObject>();
+
+        Destroy(StateText);
+        StateText=null;
     }
 
 }

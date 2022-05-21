@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 
 public enum ItemTypes{
-    noItem, gun
+    noItem, gun, stars
 }
 
 

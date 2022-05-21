@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public enum Objects{
-    player, wall, projectile, pickup
+    player, wall, projectile, pickup, breakablewall
 }
 
 public class BehCharacter : MonoBehaviour
@@ -13,8 +13,13 @@ public class BehCharacter : MonoBehaviour
     public GameObject targetSquare;
     public GameObject source;
     public HardActions currentTurn;
+    public Dir4 currentDir;
 
-    public List<Rule> rules; 
+    int statementCursor;
+    public List<Statement> statements;
+
+
+
     private float speedUnit = 1.28f;
     public Objects objectType;
 
@@ -36,7 +41,6 @@ public class BehCharacter : MonoBehaviour
     }
 
     void Awake(){
-        rules = new List<Rule>();
         inventory = new List<Item>();
         variables = new int[6];
         for(int i=0 ; i<6; i++) variables[i]=1;
@@ -45,6 +49,9 @@ public class BehCharacter : MonoBehaviour
         maxStars=100;
         currStars=0;
         arrived=true;
+
+        statementCursor=0;
+        statements=new List<Statement>(); 
     }
 
     // Update is called once per frame
@@ -68,6 +75,9 @@ public class BehCharacter : MonoBehaviour
                     }
                 }
             }
+
+            if(currHP>=maxHP) currHP=maxHP;
+            if(currHP<=0) Destroy(gameObject);
         }
     }
 
@@ -82,17 +92,20 @@ public class BehCharacter : MonoBehaviour
     void continueTurn(){
         //Debug.Log("Action: " + currentTurn);
         if(!arrived){
-            if(currentTurn == HardActions.moveUp){
-                gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + speedUnit*Time.deltaTime);
-            } else if(currentTurn == HardActions.moveLeft){
-                gameObject.transform.position = new Vector2(gameObject.transform.position.x - speedUnit*Time.deltaTime, gameObject.transform.position.y);
-            } else if(currentTurn == HardActions.moveDown){
-                gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - speedUnit*Time.deltaTime);
-            } else if(currentTurn == HardActions.moveRight){
-                gameObject.transform.position = new Vector2(gameObject.transform.position.x + speedUnit*Time.deltaTime, gameObject.transform.position.y);
-            } else{
-                
+            if(currentTurn==HardActions.move){
+                if(currentDir == Dir4.up){
+                    gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + speedUnit*Time.deltaTime);
+                } else if(currentDir == Dir4.left){
+                    gameObject.transform.position = new Vector2(gameObject.transform.position.x - speedUnit*Time.deltaTime, gameObject.transform.position.y);
+                } else if(currentDir == Dir4.down){
+                    gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - speedUnit*Time.deltaTime);
+                } else if(currentDir == Dir4.right){
+                    gameObject.transform.position = new Vector2(gameObject.transform.position.x + speedUnit*Time.deltaTime, gameObject.transform.position.y);
+                } else{
+                    
+                }
             }
+            
         }
 
         if(distanceTwoPoints(gameObject.transform.position.x, gameObject.transform.position.y, targetSquare.gameObject.transform.position.x, targetSquare.gameObject.transform.position.y) < 0.01){
@@ -107,42 +120,33 @@ public class BehCharacter : MonoBehaviour
         BehSquare mySquareBehavior = currentSquare.GetComponent<BehSquare>();
 
         currentTurn=HardActions.doNothing;
-        for(int i=0 ; i<rules.Count ; ++i){
-            if(rules[i].run(this)){
-                
-                break;
+        if(statementCursor<statements.Count){
+            statements[statementCursor].run(this);
+
+            //loops don't advance the cursor until they end
+            if(statements[statementCursor] is Loop){
+                Loop loop = statements[statementCursor] as Loop;
+                if(loop.currentIteration<loop.times){
+                    statementCursor--;
+                }
             }
+
+            //advance after performing actions
+            statementCursor++;
         }
+
+        //currentTurn=HardActions.doNothing;
+        //for(int i=0 ; i<rules.Count ; ++i){
+        //    if(rules[i].run(this)){
+        //        
+        //        break;
+        //    }
+        //}
     }
 
     void occupy(GameObject newSquare){
         currentSquare = newSquare;
         transform.position = new Vector2(newSquare.transform.position.x, newSquare.transform.position.y);
-    }
-
-    //MANIPULACION DE REGLAS
-    public void addRule(Rule prule){
-        rules.Add(prule);
-    }
-
-    public void moveRuleUp(int index){
-        if(index>0){
-            Rule aux = rules[index-1];
-            rules[index-1] = rules[index];
-            rules[index] = aux;
-        }
-    }
-
-    public void moveRuleDown(int index){
-        if(index<rules.Count-1){
-            Rule aux = rules[index+1];
-            rules[index+1] = rules[index];
-            rules[index] = aux;
-        }
-    }
-
-    public void removeRule(int index){
-        rules.RemoveAt(index);
     }
 
     public void incVariable(Variables vari){
@@ -161,7 +165,7 @@ public class BehCharacter : MonoBehaviour
         }
     }
 
-    public void useItem(ItemTypes itemToUse, seeDirections dir){
+    public void useItem(ItemTypes itemToUse, Dir4 dir){
         //Check if we have the item
         int index = -1;
         for(int i=0 ; i<inventory.Count ; ++i){
@@ -225,10 +229,13 @@ public class BehCharacter : MonoBehaviour
 
             if(otherChar.objectType == Objects.player){ //PLAYER WITH PLAYER
                 targetSquare=currentSquare;
-                if(currentTurn==HardActions.moveRight) currentTurn=HardActions.moveLeft;
-                else if(currentTurn==HardActions.moveUp) currentTurn=HardActions.moveDown;
-                else if(currentTurn==HardActions.moveLeft) currentTurn=HardActions.moveRight;
-                else if(currentTurn==HardActions.moveDown) currentTurn=HardActions.moveUp;
+                if(currentTurn==HardActions.move){
+                    if(currentDir==Dir4.right) currentDir=Dir4.left;
+                    else if(currentDir==Dir4.up) currentDir=Dir4.down;
+                    else if(currentDir==Dir4.down) currentDir=Dir4.up;
+                    else if(currentDir==Dir4.left) currentDir=Dir4.right;
+                }
+                
             }
             
             else if(otherChar.objectType == Objects.projectile){ //PLAYER WITH PROJECTILE
@@ -238,17 +245,25 @@ public class BehCharacter : MonoBehaviour
                 }
             }
 
-            else if(otherChar.objectType == Objects.wall){ //PLAYER WITH WALL
+            else if(otherChar.objectType == Objects.wall || otherChar.objectType == Objects.breakablewall){ //PLAYER WITH WALL
                 targetSquare=currentSquare;
-                if(currentTurn==HardActions.moveRight) currentTurn=HardActions.moveLeft;
-                else if(currentTurn==HardActions.moveUp) currentTurn=HardActions.moveDown;
-                else if(currentTurn==HardActions.moveLeft) currentTurn=HardActions.moveRight;
-                else if(currentTurn==HardActions.moveDown) currentTurn=HardActions.moveUp;
+                if(currentTurn==HardActions.move){
+                    if(currentDir==Dir4.right) currentDir=Dir4.left;
+                    else if(currentDir==Dir4.up) currentDir=Dir4.down;
+                    else if(currentDir==Dir4.down) currentDir=Dir4.up;
+                    else if(currentDir==Dir4.left) currentDir=Dir4.right;
+                }
+                currHP-=5;
             }
 
             else if(otherChar.objectType == Objects.pickup){ //PLAYER WITH PICKUP
                 foreach(Item item in otherChar.inventory){
-                    obtainItem(item.type, item.charges);
+                    if(item.type==ItemTypes.stars){
+                        currStars+=item.charges;
+                    }
+                    else{
+                        obtainItem(item.type, item.charges);
+                    }
                 }
                 BehBoard.destroyThing(otherChar);
             }
@@ -257,6 +272,11 @@ public class BehCharacter : MonoBehaviour
         else if(objectType == Objects.projectile){
 
             if(otherChar.objectType == Objects.wall){ //PROJECTILE WITH WALL
+                BehBoard.destroyThing(this);
+            }
+
+            if(otherChar.objectType == Objects.breakablewall){ //PROJECTILE WITH BREAKABLE WALL
+                otherChar.currHP-=currHP;
                 BehBoard.destroyThing(this);
             }
 
@@ -270,6 +290,11 @@ public class BehCharacter : MonoBehaviour
         res = Mathf.Sqrt(ressq);
 
         return res;
+    }
+
+    //STATEMENT STUFF
+    public void addStatement(Statement newstat){
+        statements.Add(newstat);
     }
 
 }

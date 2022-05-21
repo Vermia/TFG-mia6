@@ -7,25 +7,22 @@ using UnityEngine;
 
 
 public enum HardActions{
-    doNothing,
-    moveRight,
-    moveUp,
-    moveLeft,
-    moveDown,
-    shootRight, shootUp, shootLeft, shootDown
+    doNothing, move, shoot, pickup
 }
 
 public class Action{
     
 
     public HardActions hardAction;
+    public Dir4 affectedDirection;
     public ItemTypes affectedItem;
     public List<SoftAction> softActions;
 
-    public Action(HardActions pha){
+    public Action(HardActions pha, Dir4 pdir){
         hardAction = pha;
         affectedItem = ItemTypes.noItem;
         softActions = new List<SoftAction>();
+        affectedDirection = pdir;
     }
 
     public void addSoftAction(SoftActions psoft, Variables pvar, int pnumber = 0){
@@ -46,46 +43,25 @@ public class Action{
             act.perform(chara);
         }
 
-
+        chara.currentTurn=hardAction;
+        chara.currentDir = affectedDirection;
         switch(hardAction){
-            case HardActions.moveRight:
-                //otherObject = BehBoard.getObjectInSquare(mySquareBehavior.i+1, mySquareBehavior.j);
-                //if(!otherObject || otherObject.GetComponent<BehCharacter>().objectType != Objects.wall ){
-                    chara.currentTurn = HardActions.moveRight; chara.targetSquare = BehBoard.board[ mySquareBehavior.i + 1, mySquareBehavior.j ];
-                //} else chara.currentTurn = HardActions.doNothing;
+            case HardActions.move:
+                if(affectedDirection==Dir4.right){
+                    chara.targetSquare = BehBoard.board[ mySquareBehavior.i + 1, mySquareBehavior.j ];
+                } else if(affectedDirection==Dir4.up){
+                    chara.targetSquare = BehBoard.board[ mySquareBehavior.i, mySquareBehavior.j - 1 ];
+                } else if(affectedDirection==Dir4.left){
+                    chara.targetSquare = BehBoard.board[ mySquareBehavior.i - 1, mySquareBehavior.j ];
+                } else if(affectedDirection==Dir4.down){
+                    chara.targetSquare = BehBoard.board[ mySquareBehavior.i, mySquareBehavior.j + 1 ];
+                }
             break;
-            case HardActions.moveLeft:
-                //otherObject = BehBoard.getObjectInSquare(mySquareBehavior.i-1, mySquareBehavior.j);
-                //if(!otherObject || otherObject.GetComponent<BehCharacter>().objectType != Objects.wall ){
-                    chara.currentTurn = HardActions.moveLeft; chara.targetSquare = BehBoard.board[ mySquareBehavior.i - 1, mySquareBehavior.j ];
-                //} else chara.currentTurn = HardActions.doNothing;
-            break;
-            case HardActions.moveUp:
-                //otherObject = BehBoard.getObjectInSquare(mySquareBehavior.i, mySquareBehavior.j-1);
-                //if(!otherObject || otherObject.GetComponent<BehCharacter>().objectType != Objects.wall ){
-                    chara.currentTurn = HardActions.moveUp;chara.targetSquare = BehBoard.board[ mySquareBehavior.i, mySquareBehavior.j - 1 ];
-                //} else chara.currentTurn = HardActions.doNothing;
-            break;
-            case HardActions.moveDown:
-                //
-                
-                //otherObject = BehBoard.getObjectInSquare(mySquareBehavior.i, mySquareBehavior.j+1);
-                //if(!otherObject || otherObject.GetComponent<BehCharacter>().objectType != Objects.wall ){
-                    chara.currentTurn = HardActions.moveDown; chara.targetSquare = BehBoard.board[ mySquareBehavior.i, mySquareBehavior.j +1 ];
-                //} else chara.currentTurn = HardActions.doNothing;
-            break;
-            case HardActions.shootRight:
-                chara.useItem(ItemTypes.gun, seeDirections.right);
-            break;
-            case HardActions.shootUp:
-                chara.useItem(ItemTypes.gun, seeDirections.up);
-            break;
-            case HardActions.shootLeft:
-                chara.useItem(ItemTypes.gun, seeDirections.left);
-            break;
-            case HardActions.shootDown:
-                chara.useItem(ItemTypes.gun, seeDirections.down);
+
+            case HardActions.shoot:
+                chara.useItem(ItemTypes.gun, affectedDirection);
             break;
         }
+            
     }
 }
