@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public enum Objects{
-    player, wall, projectile, pickup, breakablewall
+    player, wall, projectile, pickup, breakablewall, goal
 }
 
 public class BehCharacter : MonoBehaviour
@@ -257,15 +257,22 @@ public class BehCharacter : MonoBehaviour
             }
 
             else if(otherChar.objectType == Objects.pickup){ //PLAYER WITH PICKUP
-                foreach(Item item in otherChar.inventory){
-                    if(item.type==ItemTypes.stars){
-                        currStars+=item.charges;
-                    }
-                    else{
-                        obtainItem(item.type, item.charges);
-                    }
+                targetSquare=currentSquare;
+                if(currentTurn==HardActions.move){
+                    if(currentDir==Dir4.right) currentDir=Dir4.left;
+                    else if(currentDir==Dir4.up) currentDir=Dir4.down;
+                    else if(currentDir==Dir4.down) currentDir=Dir4.up;
+                    else if(currentDir==Dir4.left) currentDir=Dir4.right;
                 }
-                BehBoard.destroyThing(otherChar);
+                //foreach(Item item in otherChar.inventory){
+                //    if(item.type==ItemTypes.stars){
+                //        currStars+=item.charges;
+                //    }
+                //    else{
+                //        obtainItem(item.type, item.charges);
+                //    }
+                //}
+                //BehBoard.destroyThing(otherChar);
             }
         }
 
@@ -295,6 +302,10 @@ public class BehCharacter : MonoBehaviour
     //STATEMENT STUFF
     public void addStatement(Statement newstat){
         statements.Add(newstat);
+    }
+
+    public void deleteStatement(int index){
+        statements.RemoveAt(index);
     }
 
 }

@@ -47,21 +47,46 @@ public class Action{
         chara.currentDir = affectedDirection;
         switch(hardAction){
             case HardActions.move:
-                if(affectedDirection==Dir4.right){
-                    chara.targetSquare = BehBoard.board[ mySquareBehavior.i + 1, mySquareBehavior.j ];
-                } else if(affectedDirection==Dir4.up){
-                    chara.targetSquare = BehBoard.board[ mySquareBehavior.i, mySquareBehavior.j - 1 ];
-                } else if(affectedDirection==Dir4.left){
-                    chara.targetSquare = BehBoard.board[ mySquareBehavior.i - 1, mySquareBehavior.j ];
-                } else if(affectedDirection==Dir4.down){
-                    chara.targetSquare = BehBoard.board[ mySquareBehavior.i, mySquareBehavior.j + 1 ];
-                }
+                chara.targetSquare=getAdjacentSquare(chara, affectedDirection);
             break;
 
             case HardActions.shoot:
                 chara.useItem(ItemTypes.gun, affectedDirection);
             break;
+
+            case HardActions.pickup:
+                if(getAdjacentSquare(chara, affectedDirection) == null) break;
+                if(getAdjacentSquare(chara, affectedDirection).GetComponent<BehSquare>().occupant == null) break;
+                if(getAdjacentSquare(chara, affectedDirection).GetComponent<BehSquare>().occupant.GetComponent<BehCharacter>().objectType == Objects.pickup){
+                    foreach(Item item in getAdjacentSquare(chara, affectedDirection).GetComponent<BehSquare>().occupant.GetComponent<BehCharacter>().inventory){
+                        if(item.type==ItemTypes.stars){
+                            chara.currStars+=1;
+                        }
+                        else{
+                            chara.obtainItem(item.type, item.charges);
+                        }
+                    }
+                    BehBoard.destroyThing(getAdjacentSquare(chara, affectedDirection).GetComponent<BehSquare>().occupant.GetComponent<BehCharacter>());
+                }
+            break;
         }
             
+    }
+
+    GameObject getAdjacentSquare(BehCharacter chara, Dir4 dir){
+        GameObject go=null;
+        BehSquare mySquareBehavior = chara.currentSquare.GetComponent<BehSquare>();
+
+        if(affectedDirection==Dir4.right){
+            go = BehBoard.board[ mySquareBehavior.i + 1, mySquareBehavior.j ];
+        } else if(affectedDirection==Dir4.up){
+            go = BehBoard.board[ mySquareBehavior.i, mySquareBehavior.j - 1 ];
+        } else if(affectedDirection==Dir4.left){
+            go = BehBoard.board[ mySquareBehavior.i - 1, mySquareBehavior.j ];
+        } else if(affectedDirection==Dir4.down){
+            go = BehBoard.board[ mySquareBehavior.i, mySquareBehavior.j + 1 ];
+        }
+
+        return go;
     }
 }

@@ -1,0 +1,2054 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -530159753, guid: 68c7e4565cde54155bb78d8e935f1ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cacheType: 3
+  lastUpdatedAtString: 2022-06-20T19:11:59.042+02:00
+  initializedAtString: 2022-06-20T18:01:59.054+02:00
+  log:
+  - commitID: 985b8d958eaa7f39fc43b8e63c82fd58a4da02b6
+    mergeA: 
+    mergeB: 
+    authorName: Vermia
+    authorEmail: domeofvermia@outlook.com
+    commitEmail: domeofvermia@outlook.com
+    commitName: Vermia
+    summary: A desarrollar bucles y condicionales, supongo
+    description: 
+    timeString: 2022-05-23T20:00:45.000+02:00
+    commitTimeString: 2022-05-23T20:00:45.000+02:00
+    changes:
+    - path: assets\Resources\Hook.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\Hook.png
+      projectPath: assets\Resources\Hook.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\Hook.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\Hook.png.meta
+      projectPath: assets\Resources\Hook.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+  - commitID: 096f90443222f0d2ca3705a1bea3e5f4e4e87a16
+    mergeA: 
+    mergeB: 
+    authorName: Vermia
+    authorEmail: domeofvermia@outlook.com
+    commitEmail: domeofvermia@outlook.com
+    commitName: Vermia
+    summary: 'to do: hacer que la bala se mueva y solucionar bug de que al crear
+      nueva regla no se transmite la accion'
+    description: 
+    timeString: 2022-05-21T19:59:48.000+02:00
+    commitTimeString: 2022-05-21T19:59:48.000+02:00
+    changes:
+    - path: assets\BehUIAbove.cs
+      fullPath: C:\Users\Vermia\TFG\assets\BehUIAbove.cs
+      projectPath: assets\BehUIAbove.cs
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\BehUIAbove.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\BehUIAbove.cs.meta
+      projectPath: assets\BehUIAbove.cs.meta
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\Board\BehBoard.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Board\BehBoard.cs
+      projectPath: assets\Board\BehBoard.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Characters\Action.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Action.cs
+      projectPath: assets\Characters\Action.cs
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\Characters\Action.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Action.cs.meta
+      projectPath: assets\Characters\Action.cs.meta
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\Characters\BehCharacter.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\BehCharacter.cs
+      projectPath: assets\Characters\BehCharacter.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Characters\Condition.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Condition.cs
+      projectPath: assets\Characters\Condition.cs
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\Characters\Condition.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Condition.cs.meta
+      projectPath: assets\Characters\Condition.cs.meta
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\Characters\Item.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Item.cs
+      projectPath: assets\Characters\Item.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Characters\Rule.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Rule.cs
+      projectPath: assets\Characters\Rule.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Characters\RuleBuilder.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\RuleBuilder.cs
+      projectPath: assets\Characters\RuleBuilder.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Instructions\Action.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Instructions\Action.cs
+      projectPath: assets\Instructions\Action.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\downmove.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\downmove.png
+      projectPath: assets\Resources\UIImages\downmove.png
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\downmove.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\downmove.png.meta
+      projectPath: assets\Resources\UIImages\downmove.png.meta
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\downmovesel.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\downmovesel.png
+      projectPath: assets\Resources\UIImages\downmovesel.png
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\downmovesel.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\downmovesel.png.meta
+      projectPath: assets\Resources\UIImages\downmovesel.png.meta
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\leftmove.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\leftmove.png
+      projectPath: assets\Resources\UIImages\leftmove.png
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\leftmove.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\leftmove.png.meta
+      projectPath: assets\Resources\UIImages\leftmove.png.meta
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\leftmovesel.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\leftmovesel.png
+      projectPath: assets\Resources\UIImages\leftmovesel.png
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\leftmovesel.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\leftmovesel.png.meta
+      projectPath: assets\Resources\UIImages\leftmovesel.png.meta
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\rightmove.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\rightmove.png
+      projectPath: assets\Resources\UIImages\rightmove.png
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\rightmove.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\rightmove.png.meta
+      projectPath: assets\Resources\UIImages\rightmove.png.meta
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\rightmovesel.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\rightmovesel.png
+      projectPath: assets\Resources\UIImages\rightmovesel.png
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\rightmovesel.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\rightmovesel.png.meta
+      projectPath: assets\Resources\UIImages\rightmovesel.png.meta
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\upmove.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\upmove.png
+      projectPath: assets\Resources\UIImages\upmove.png
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\upmove.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\upmove.png.meta
+      projectPath: assets\Resources\UIImages\upmove.png.meta
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\upmovesel.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\upmovesel.png
+      projectPath: assets\Resources\UIImages\upmovesel.png
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\upmovesel.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\upmovesel.png.meta
+      projectPath: assets\Resources\UIImages\upmovesel.png.meta
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\Scenes\SampleScene.unity
+      fullPath: C:\Users\Vermia\TFG\assets\Scenes\SampleScene.unity
+      projectPath: assets\Scenes\SampleScene.unity
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Squares\SquareEmpty.png
+      fullPath: C:\Users\Vermia\TFG\assets\Squares\SquareEmpty.png
+      projectPath: assets\Squares\SquareEmpty.png
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Squares\SquareWall.png
+      fullPath: C:\Users\Vermia\TFG\assets\Squares\SquareWall.png
+      projectPath: assets\Squares\SquareWall.png
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\UI\Above.png
+      fullPath: C:\Users\Vermia\TFG\assets\UI\Above.png
+      projectPath: assets\UI\Above.png
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\UI\Above.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\UI\Above.png.meta
+      projectPath: assets\UI\Above.png.meta
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\UI\BehUIAbove.cs
+      fullPath: C:\Users\Vermia\TFG\assets\UI\BehUIAbove.cs
+      projectPath: assets\UI\BehUIAbove.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\UI\BehUIEdit.cs
+      fullPath: C:\Users\Vermia\TFG\assets\UI\BehUIEdit.cs
+      projectPath: assets\UI\BehUIEdit.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\UI\BehUIRule.cs
+      fullPath: C:\Users\Vermia\TFG\assets\UI\BehUIRule.cs
+      projectPath: assets\UI\BehUIRule.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\UI\Edit.png
+      fullPath: C:\Users\Vermia\TFG\assets\UI\Edit.png
+      projectPath: assets\UI\Edit.png
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\UI\Edit.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\UI\Edit.png.meta
+      projectPath: assets\UI\Edit.png.meta
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\UI\Left.png
+      fullPath: C:\Users\Vermia\TFG\assets\UI\Left.png
+      projectPath: assets\UI\Left.png
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\UI\Left.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\UI\Left.png.meta
+      projectPath: assets\UI\Left.png.meta
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\UI\Right.png
+      fullPath: C:\Users\Vermia\TFG\assets\UI\Right.png
+      projectPath: assets\UI\Right.png
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\UI\Right.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\UI\Right.png.meta
+      projectPath: assets\UI\Right.png.meta
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\UI\StartButton.png
+      fullPath: C:\Users\Vermia\TFG\assets\UI\StartButton.png
+      projectPath: assets\UI\StartButton.png
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\UI\StartButton.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\UI\StartButton.png.meta
+      projectPath: assets\UI\StartButton.png.meta
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\UI\UIImages\heart.png
+      fullPath: C:\Users\Vermia\TFG\assets\UI\UIImages\heart.png
+      projectPath: assets\UI\UIImages\heart.png
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\UI\UIImages\heart.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\UI\UIImages\heart.png.meta
+      projectPath: assets\UI\UIImages\heart.png.meta
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\UI\UIImages\star.png
+      fullPath: C:\Users\Vermia\TFG\assets\UI\UIImages\star.png
+      projectPath: assets\UI\UIImages\star.png
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\UI\UIImages\star.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\UI\UIImages\star.png.meta
+      projectPath: assets\UI\UIImages\star.png.meta
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\UI\retractButton.png
+      fullPath: C:\Users\Vermia\TFG\assets\UI\retractButton.png
+      projectPath: assets\UI\retractButton.png
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: assets\UI\retractButton.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\UI\retractButton.png.meta
+      projectPath: assets\UI\retractButton.png.meta
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+  - commitID: 3cfc89f91dc046bf1b7eae69bdf9249a94a66672
+    mergeA: 
+    mergeB: 
+    authorName: Vermia
+    authorEmail: domeofvermia@outlook.com
+    commitEmail: domeofvermia@outlook.com
+    commitName: Vermia
+    summary: voy a liarla xd
+    description: 
+    timeString: 2022-05-21T18:56:19.000+02:00
+    commitTimeString: 2022-05-21T18:56:19.000+02:00
+    changes:
+    - path: assets\Resources\UIImages\move.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\move.png
+      projectPath: assets\Resources\UIImages\move.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\move.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\move.png.meta
+      projectPath: assets\Resources\UIImages\move.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\movesel.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\movesel.png
+      projectPath: assets\Resources\UIImages\movesel.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\movesel.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\movesel.png.meta
+      projectPath: assets\Resources\UIImages\movesel.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\pickup.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\pickup.png
+      projectPath: assets\Resources\UIImages\pickup.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\pickup.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\pickup.png.meta
+      projectPath: assets\Resources\UIImages\pickup.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\pickupsel.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\pickupsel.png
+      projectPath: assets\Resources\UIImages\pickupsel.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\pickupsel.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\pickupsel.png.meta
+      projectPath: assets\Resources\UIImages\pickupsel.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\shoot.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\shoot.png
+      projectPath: assets\Resources\UIImages\shoot.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\shoot.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\shoot.png.meta
+      projectPath: assets\Resources\UIImages\shoot.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\shootsel.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\shootsel.png
+      projectPath: assets\Resources\UIImages\shootsel.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\shootsel.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\shootsel.png.meta
+      projectPath: assets\Resources\UIImages\shootsel.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+  - commitID: 3a732584f7090867ca580db2cf4383d5e2002a1e
+    mergeA: 
+    mergeB: 
+    authorName: Vermia
+    authorEmail: domeofvermia@outlook.com
+    commitEmail: domeofvermia@outlook.com
+    commitName: Vermia
+    summary: en proceso de que aparezcan los statements a la izquierda
+    description: 
+    timeString: 2022-05-19T20:02:40.000+02:00
+    commitTimeString: 2022-05-19T20:02:40.000+02:00
+    changes:
+    - path: assets\Resources.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources.meta
+      projectPath: assets\Resources.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\Above.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\Above.png
+      projectPath: assets\Resources\Above.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\Above.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\Above.png.meta
+      projectPath: assets\Resources\Above.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\Edit.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\Edit.png
+      projectPath: assets\Resources\Edit.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\Edit.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\Edit.png.meta
+      projectPath: assets\Resources\Edit.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\Left.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\Left.png
+      projectPath: assets\Resources\Left.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\Left.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\Left.png.meta
+      projectPath: assets\Resources\Left.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\Right.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\Right.png
+      projectPath: assets\Resources\Right.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\Right.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\Right.png.meta
+      projectPath: assets\Resources\Right.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\StartButton.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\StartButton.png
+      projectPath: assets\Resources\StartButton.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\StartButton.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\StartButton.png.meta
+      projectPath: assets\Resources\StartButton.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages.meta
+      projectPath: assets\Resources\UIImages.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\downmove.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\downmove.png
+      projectPath: assets\Resources\UIImages\downmove.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\downmove.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\downmove.png.meta
+      projectPath: assets\Resources\UIImages\downmove.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\downmovesel.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\downmovesel.png
+      projectPath: assets\Resources\UIImages\downmovesel.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\downmovesel.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\downmovesel.png.meta
+      projectPath: assets\Resources\UIImages\downmovesel.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\heart.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\heart.png
+      projectPath: assets\Resources\UIImages\heart.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\heart.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\heart.png.meta
+      projectPath: assets\Resources\UIImages\heart.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\leftmove.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\leftmove.png
+      projectPath: assets\Resources\UIImages\leftmove.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\leftmove.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\leftmove.png.meta
+      projectPath: assets\Resources\UIImages\leftmove.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\leftmovesel.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\leftmovesel.png
+      projectPath: assets\Resources\UIImages\leftmovesel.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\leftmovesel.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\leftmovesel.png.meta
+      projectPath: assets\Resources\UIImages\leftmovesel.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\rightmove.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\rightmove.png
+      projectPath: assets\Resources\UIImages\rightmove.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\rightmove.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\rightmove.png.meta
+      projectPath: assets\Resources\UIImages\rightmove.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\rightmovesel.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\rightmovesel.png
+      projectPath: assets\Resources\UIImages\rightmovesel.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\rightmovesel.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\rightmovesel.png.meta
+      projectPath: assets\Resources\UIImages\rightmovesel.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\star.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\star.png
+      projectPath: assets\Resources\UIImages\star.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\star.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\star.png.meta
+      projectPath: assets\Resources\UIImages\star.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\upmove.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\upmove.png
+      projectPath: assets\Resources\UIImages\upmove.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\upmove.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\upmove.png.meta
+      projectPath: assets\Resources\UIImages\upmove.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\upmovesel.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\upmovesel.png
+      projectPath: assets\Resources\UIImages\upmovesel.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\UIImages\upmovesel.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\UIImages\upmovesel.png.meta
+      projectPath: assets\Resources\UIImages\upmovesel.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\retractButton.png
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\retractButton.png
+      projectPath: assets\Resources\retractButton.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Resources\retractButton.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Resources\retractButton.png.meta
+      projectPath: assets\Resources\retractButton.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+  - commitID: 39697ffeed00772e9a84c98e6cd3a4f5602a6e46
+    mergeA: 
+    mergeB: 
+    authorName: Vermia
+    authorEmail: domeofvermia@outlook.com
+    commitEmail: domeofvermia@outlook.com
+    commitName: Vermia
+    summary: movimiento OK, toca meter los bucles en la ventana de la derecha y entonces,
+      a interfacear
+    description: 
+    timeString: 2022-05-18T20:03:20.000+02:00
+    commitTimeString: 2022-05-18T20:03:20.000+02:00
+    changes:
+    - path: assets\Instructions.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Instructions.meta
+      projectPath: assets\Instructions.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Instructions\Action.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Instructions\Action.cs
+      projectPath: assets\Instructions\Action.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Instructions\Action.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Instructions\Action.cs.meta
+      projectPath: assets\Instructions\Action.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Instructions\Condition.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Instructions\Condition.cs
+      projectPath: assets\Instructions\Condition.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Instructions\Condition.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Instructions\Condition.cs.meta
+      projectPath: assets\Instructions\Condition.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Instructions\Conditional.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Instructions\Conditional.cs
+      projectPath: assets\Instructions\Conditional.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Instructions\Conditional.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Instructions\Conditional.cs.meta
+      projectPath: assets\Instructions\Conditional.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Instructions\Instruction.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Instructions\Instruction.cs
+      projectPath: assets\Instructions\Instruction.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Instructions\Instruction.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Instructions\Instruction.cs.meta
+      projectPath: assets\Instructions\Instruction.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Instructions\Loop.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Instructions\Loop.cs
+      projectPath: assets\Instructions\Loop.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Instructions\Loop.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Instructions\Loop.cs.meta
+      projectPath: assets\Instructions\Loop.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Instructions\Statement.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Instructions\Statement.cs
+      projectPath: assets\Instructions\Statement.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Instructions\Statement.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Instructions\Statement.cs.meta
+      projectPath: assets\Instructions\Statement.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+  - commitID: 784fba8f51efca14de5a65de3df0794aef067ecf
+    mergeA: 
+    mergeB: 
+    authorName: Vermia
+    authorEmail: domeofvermia@outlook.com
+    commitEmail: domeofvermia@outlook.com
+    commitName: Vermia
+    summary: last rule one
+    description: 
+    timeString: 2022-05-18T17:05:11.000+02:00
+    commitTimeString: 2022-05-18T17:05:11.000+02:00
+    changes:
+    - path: assets\Board\Maps.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Board\Maps.cs
+      projectPath: assets\Board\Maps.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Board\Maps.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Board\Maps.cs.meta
+      projectPath: assets\Board\Maps.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Squares\breakWall.png
+      fullPath: C:\Users\Vermia\TFG\assets\Squares\breakWall.png
+      projectPath: assets\Squares\breakWall.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Squares\breakWall.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Squares\breakWall.png.meta
+      projectPath: assets\Squares\breakWall.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+  - commitID: 75de9cf828610265e8ad40e01895a0b9418c04a3
+    mergeA: 
+    mergeB: 
+    authorName: Vermia
+    authorEmail: domeofvermia@outlook.com
+    commitEmail: domeofvermia@outlook.com
+    commitName: Vermia
+    summary: prep1
+    description: 
+    timeString: 2022-05-14T20:28:50.000+02:00
+    commitTimeString: 2022-05-14T20:28:50.000+02:00
+    changes:
+    - path: assets\Characters\bullet.png
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\bullet.png
+      projectPath: assets\Characters\bullet.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\bullet.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\bullet.png.meta
+      projectPath: assets\Characters\bullet.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+  - commitID: fb1c9847e1f2bd25d92d37907b5cfbc8d8057317
+    mergeA: 
+    mergeB: 
+    authorName: Vermia
+    authorEmail: domeofvermia@outlook.com
+    commitEmail: domeofvermia@outlook.com
+    commitName: Vermia
+    summary: graphics kinda
+    description: 
+    timeString: 2022-04-29T03:24:32.000+02:00
+    commitTimeString: 2022-04-29T03:24:32.000+02:00
+    changes:
+    - path: assets\Characters\BlueRobot.png
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\BlueRobot.png
+      projectPath: assets\Characters\BlueRobot.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\BlueRobot.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\BlueRobot.png.meta
+      projectPath: assets\Characters\BlueRobot.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\RedRobot.png
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\RedRobot.png
+      projectPath: assets\Characters\RedRobot.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\RedRobot.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\RedRobot.png.meta
+      projectPath: assets\Characters\RedRobot.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\pickup.png
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\pickup.png
+      projectPath: assets\Characters\pickup.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\pickup.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\pickup.png.meta
+      projectPath: assets\Characters\pickup.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\Above.png
+      fullPath: C:\Users\Vermia\TFG\assets\UI\Above.png
+      projectPath: assets\UI\Above.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\Above.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\UI\Above.png.meta
+      projectPath: assets\UI\Above.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\Edit.png
+      fullPath: C:\Users\Vermia\TFG\assets\UI\Edit.png
+      projectPath: assets\UI\Edit.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\Edit.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\UI\Edit.png.meta
+      projectPath: assets\UI\Edit.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\Left.png
+      fullPath: C:\Users\Vermia\TFG\assets\UI\Left.png
+      projectPath: assets\UI\Left.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\Left.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\UI\Left.png.meta
+      projectPath: assets\UI\Left.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\Right.png
+      fullPath: C:\Users\Vermia\TFG\assets\UI\Right.png
+      projectPath: assets\UI\Right.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\Right.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\UI\Right.png.meta
+      projectPath: assets\UI\Right.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\StartButton.png
+      fullPath: C:\Users\Vermia\TFG\assets\UI\StartButton.png
+      projectPath: assets\UI\StartButton.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\StartButton.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\UI\StartButton.png.meta
+      projectPath: assets\UI\StartButton.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\retractButton.png
+      fullPath: C:\Users\Vermia\TFG\assets\UI\retractButton.png
+      projectPath: assets\UI\retractButton.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\retractButton.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\UI\retractButton.png.meta
+      projectPath: assets\UI\retractButton.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+  - commitID: e76b85fb4ada1efb811bc6f1cf4644d8f1564b50
+    mergeA: 
+    mergeB: 
+    authorName: Vermia
+    authorEmail: domeofvermia@outlook.com
+    commitEmail: domeofvermia@outlook.com
+    commitName: Vermia
+    summary: multiple conds WIP
+    description: 
+    timeString: 2022-03-29T13:37:19.000+02:00
+    commitTimeString: 2022-03-29T13:37:19.000+02:00
+    changes:
+    - path: assets\Characters\Condition.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Condition.cs
+      projectPath: assets\Characters\Condition.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\UI\BehUIEdit.cs
+      fullPath: C:\Users\Vermia\TFG\assets\UI\BehUIEdit.cs
+      projectPath: assets\UI\BehUIEdit.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: 5ed9de7e5bd493fef6696ddeeba87700a8e551a1
+    mergeA: 
+    mergeB: 
+    authorName: Vermia
+    authorEmail: domeofvermia@outlook.com
+    commitEmail: domeofvermia@outlook.com
+    commitName: Vermia
+    summary: multiple conds WIP
+    description: 
+    timeString: 2022-03-29T13:11:24.000+02:00
+    commitTimeString: 2022-03-29T13:11:24.000+02:00
+    changes:
+    - path: assets\Board\BehBoard.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Board\BehBoard.cs
+      projectPath: assets\Board\BehBoard.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Characters\Action.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Action.cs
+      projectPath: assets\Characters\Action.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Characters\BehCharacter.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\BehCharacter.cs
+      projectPath: assets\Characters\BehCharacter.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Characters\Condition.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Condition.cs
+      projectPath: assets\Characters\Condition.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Characters\PreCharacter.prefab
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\PreCharacter.prefab
+      projectPath: assets\Characters\PreCharacter.prefab
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Characters\Rule.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Rule.cs
+      projectPath: assets\Characters\Rule.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Characters\RuleBuilder.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\RuleBuilder.cs
+      projectPath: assets\Characters\RuleBuilder.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Characters\SoftAction.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\SoftAction.cs
+      projectPath: assets\Characters\SoftAction.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Scenes\SampleScene.unity
+      fullPath: C:\Users\Vermia\TFG\assets\Scenes\SampleScene.unity
+      projectPath: assets\Scenes\SampleScene.unity
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Squares\BehSquare.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Squares\BehSquare.cs
+      projectPath: assets\Squares\BehSquare.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\UI\BehUIAbove.cs
+      fullPath: C:\Users\Vermia\TFG\assets\UI\BehUIAbove.cs
+      projectPath: assets\UI\BehUIAbove.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\UI\BehUIEdit.cs
+      fullPath: C:\Users\Vermia\TFG\assets\UI\BehUIEdit.cs
+      projectPath: assets\UI\BehUIEdit.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\UI\BehUIRule.cs
+      fullPath: C:\Users\Vermia\TFG\assets\UI\BehUIRule.cs
+      projectPath: assets\UI\BehUIRule.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: c08b566fe3432a33a18523cae983548866f3642a
+    mergeA: 
+    mergeB: 
+    authorName: Vermia
+    authorEmail: domeofvermia@outlook.com
+    commitEmail: domeofvermia@outlook.com
+    commitName: Vermia
+    summary: Victoria
+    description: 
+    timeString: 2022-03-16T12:15:14.000+01:00
+    commitTimeString: 2022-03-16T12:15:14.000+01:00
+    changes:
+    - path: assets\Characters\Gun.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Gun.meta
+      projectPath: assets\Characters\Gun.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\Gun\BehBullet.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Gun\BehBullet.cs
+      projectPath: assets\Characters\Gun\BehBullet.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\Gun\BehBullet.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Gun\BehBullet.cs.meta
+      projectPath: assets\Characters\Gun\BehBullet.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\Gun\Bullet.prefab
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Gun\Bullet.prefab
+      projectPath: assets\Characters\Gun\Bullet.prefab
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\Gun\Bullet.prefab.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Gun\Bullet.prefab.meta
+      projectPath: assets\Characters\Gun\Bullet.prefab.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\Gun\Gun.prefab
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Gun\Gun.prefab
+      projectPath: assets\Characters\Gun\Gun.prefab
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\Gun\Gun.prefab.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Gun\Gun.prefab.meta
+      projectPath: assets\Characters\Gun\Gun.prefab.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\Item.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Item.cs
+      projectPath: assets\Characters\Item.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\Item.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Item.cs.meta
+      projectPath: assets\Characters\Item.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\BehResetButton.cs
+      fullPath: C:\Users\Vermia\TFG\assets\UI\BehResetButton.cs
+      projectPath: assets\UI\BehResetButton.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\BehResetButton.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\UI\BehResetButton.cs.meta
+      projectPath: assets\UI\BehResetButton.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+  - commitID: 22aad6eb5c78e3a07e7d83bd8a4b60e1ba40e16b
+    mergeA: 
+    mergeB: 
+    authorName: Vermia
+    authorEmail: domeofvermia@outlook.com
+    commitEmail: domeofvermia@outlook.com
+    commitName: Vermia
+    summary: Arreglillos
+    description: 
+    timeString: 2022-02-25T07:08:13.000+01:00
+    commitTimeString: 2022-02-25T07:08:13.000+01:00
+    changes:
+    - path: assets\Characters\BehCharacter.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\BehCharacter.cs
+      projectPath: assets\Characters\BehCharacter.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Characters\SoftAction.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\SoftAction.cs
+      projectPath: assets\Characters\SoftAction.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Scenes\SampleScene.unity
+      fullPath: C:\Users\Vermia\TFG\assets\Scenes\SampleScene.unity
+      projectPath: assets\Scenes\SampleScene.unity
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\UI\BehUIEdit.cs
+      fullPath: C:\Users\Vermia\TFG\assets\UI\BehUIEdit.cs
+      projectPath: assets\UI\BehUIEdit.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: 3063b74fed30cabb8fa6c6d291b9e55c3c42ccce
+    mergeA: 
+    mergeB: 
+    authorName: Vermia
+    authorEmail: domeofvermia@outlook.com
+    commitEmail: domeofvermia@outlook.com
+    commitName: Vermia
+    summary: haciendo soft actions
+    description: 
+    timeString: 2022-02-19T15:42:53.000+01:00
+    commitTimeString: 2022-02-19T15:42:53.000+01:00
+    changes:
+    - path: assets\Board\BehBoard.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Board\BehBoard.cs
+      projectPath: assets\Board\BehBoard.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Characters\Action.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Action.cs
+      projectPath: assets\Characters\Action.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Characters\BehCharacter.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\BehCharacter.cs
+      projectPath: assets\Characters\BehCharacter.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Characters\Condition.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Condition.cs
+      projectPath: assets\Characters\Condition.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Characters\Rule.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Rule.cs
+      projectPath: assets\Characters\Rule.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Characters\SoftAction.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\SoftAction.cs
+      projectPath: assets\Characters\SoftAction.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Scenes\SampleScene.unity
+      fullPath: C:\Users\Vermia\TFG\assets\Scenes\SampleScene.unity
+      projectPath: assets\Scenes\SampleScene.unity
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\UI\BehUIEdit.cs
+      fullPath: C:\Users\Vermia\TFG\assets\UI\BehUIEdit.cs
+      projectPath: assets\UI\BehUIEdit.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\UI\BehUIRule.cs
+      fullPath: C:\Users\Vermia\TFG\assets\UI\BehUIRule.cs
+      projectPath: assets\UI\BehUIRule.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: 0c0d473621f3e3dafbc5c93a6c4b43db8a7ba88d
+    mergeA: 
+    mergeB: 
+    authorName: Vermia
+    authorEmail: domeofvermia@outlook.com
+    commitEmail: domeofvermia@outlook.com
+    commitName: Vermia
+    summary: 'Crear regla nueva: Falta solo soft actions'
+    description: 
+    timeString: 2022-02-12T17:50:37.000+01:00
+    commitTimeString: 2022-02-12T17:50:37.000+01:00
+    changes:
+    - path: assets\UI\SoftActionPanel.cs
+      fullPath: C:\Users\Vermia\TFG\assets\UI\SoftActionPanel.cs
+      projectPath: assets\UI\SoftActionPanel.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\SoftActionPanel.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\UI\SoftActionPanel.cs.meta
+      projectPath: assets\UI\SoftActionPanel.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+  - commitID: 4f1d330122559c29c4249f33387a4adb6716f88e
+    mergeA: 
+    mergeB: 
+    authorName: Vermia
+    authorEmail: domeofvermia@outlook.com
+    commitEmail: domeofvermia@outlook.com
+    commitName: Vermia
+    summary: A
+    description: 
+    timeString: 2022-01-24T16:30:10.000+01:00
+    commitTimeString: 2022-01-24T16:30:10.000+01:00
+    changes:
+    - path: assets\Characters\ConditionBuilder.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\ConditionBuilder.cs
+      projectPath: assets\Characters\ConditionBuilder.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\ConditionBuilder.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\ConditionBuilder.cs.meta
+      projectPath: assets\Characters\ConditionBuilder.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\RuleBuilder.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\RuleBuilder.cs
+      projectPath: assets\Characters\RuleBuilder.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\RuleBuilder.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\RuleBuilder.cs.meta
+      projectPath: assets\Characters\RuleBuilder.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\BehEditRuleButton.cs
+      fullPath: C:\Users\Vermia\TFG\assets\UI\BehEditRuleButton.cs
+      projectPath: assets\UI\BehEditRuleButton.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\BehEditRuleButton.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\UI\BehEditRuleButton.cs.meta
+      projectPath: assets\UI\BehEditRuleButton.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\BehStartButton.cs
+      fullPath: C:\Users\Vermia\TFG\assets\UI\BehStartButton.cs
+      projectPath: assets\UI\BehStartButton.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\BehStartButton.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\UI\BehStartButton.cs.meta
+      projectPath: assets\UI\BehStartButton.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\BehUIAbove.cs
+      fullPath: C:\Users\Vermia\TFG\assets\UI\BehUIAbove.cs
+      projectPath: assets\UI\BehUIAbove.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\BehUIAbove.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\UI\BehUIAbove.cs.meta
+      projectPath: assets\UI\BehUIAbove.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\BehUIEdit.cs
+      fullPath: C:\Users\Vermia\TFG\assets\UI\BehUIEdit.cs
+      projectPath: assets\UI\BehUIEdit.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\BehUIEdit.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\UI\BehUIEdit.cs.meta
+      projectPath: assets\UI\BehUIEdit.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+  - commitID: bdeacc903449d2e32370729512478a9a0da3109a
+    mergeA: 
+    mergeB: 
+    authorName: Vermia
+    authorEmail: domeofvermia@outlook.com
+    commitEmail: domeofvermia@outlook.com
+    commitName: Vermia
+    summary: Patrulla
+    description: 
+    timeString: 2022-01-21T12:10:23.000+01:00
+    commitTimeString: 2022-01-21T12:10:23.000+01:00
+    changes:
+    - path: assets\Board\BehBoard.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Board\BehBoard.cs
+      projectPath: assets\Board\BehBoard.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Characters\BehCharacter.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\BehCharacter.cs
+      projectPath: assets\Characters\BehCharacter.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Characters\Condition.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Condition.cs
+      projectPath: assets\Characters\Condition.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\Characters\SoftAction.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\SoftAction.cs
+      projectPath: assets\Characters\SoftAction.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: assets\UI\BehUIRule.cs
+      fullPath: C:\Users\Vermia\TFG\assets\UI\BehUIRule.cs
+      projectPath: assets\UI\BehUIRule.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+  - commitID: a4abcd802417795e23fe3bf47b7325607de7ac16
+    mergeA: 
+    mergeB: 
+    authorName: Vermia
+    authorEmail: domeofvermia@outlook.com
+    commitEmail: domeofvermia@outlook.com
+    commitName: Vermia
+    summary: init
+    description: 
+    timeString: 2022-01-21T10:41:27.000+01:00
+    commitTimeString: 2022-01-21T10:41:27.000+01:00
+    changes:
+    - path: assets\BehUIAbove.cs
+      fullPath: C:\Users\Vermia\TFG\assets\BehUIAbove.cs
+      projectPath: assets\BehUIAbove.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\BehUIAbove.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\BehUIAbove.cs.meta
+      projectPath: assets\BehUIAbove.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Board.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Board.meta
+      projectPath: assets\Board.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Board\BehBoard.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Board\BehBoard.cs
+      projectPath: assets\Board\BehBoard.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Board\BehBoard.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Board\BehBoard.cs.meta
+      projectPath: assets\Board\BehBoard.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Characters.meta
+      projectPath: assets\Characters.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\Action.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Action.cs
+      projectPath: assets\Characters\Action.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\Action.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Action.cs.meta
+      projectPath: assets\Characters\Action.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\BehCharacter.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\BehCharacter.cs
+      projectPath: assets\Characters\BehCharacter.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\BehCharacter.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\BehCharacter.cs.meta
+      projectPath: assets\Characters\BehCharacter.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\Condition.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Condition.cs
+      projectPath: assets\Characters\Condition.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\Condition.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Condition.cs.meta
+      projectPath: assets\Characters\Condition.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\PlaceholderCharacter.png
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\PlaceholderCharacter.png
+      projectPath: assets\Characters\PlaceholderCharacter.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\PlaceholderCharacter.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\PlaceholderCharacter.png.meta
+      projectPath: assets\Characters\PlaceholderCharacter.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\PreCharacter.prefab
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\PreCharacter.prefab
+      projectPath: assets\Characters\PreCharacter.prefab
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\PreCharacter.prefab.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\PreCharacter.prefab.meta
+      projectPath: assets\Characters\PreCharacter.prefab.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\Rule.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Rule.cs
+      projectPath: assets\Characters\Rule.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\Rule.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Rule.cs.meta
+      projectPath: assets\Characters\Rule.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\SoftAction.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\SoftAction.cs
+      projectPath: assets\Characters\SoftAction.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\SoftAction.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\SoftAction.cs.meta
+      projectPath: assets\Characters\SoftAction.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\Untitled.png
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Untitled.png
+      projectPath: assets\Characters\Untitled.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Characters\Untitled.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Characters\Untitled.png.meta
+      projectPath: assets\Characters\Untitled.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins.meta
+      projectPath: assets\Plugins.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub.meta
+      projectPath: assets\Plugins\GitHub.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor.meta
+      projectPath: assets\Plugins\GitHub\Editor.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll
+      projectPath: assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll.meta
+      projectPath: assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\ExtensionLoader.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\ExtensionLoader.cs
+      projectPath: assets\Plugins\GitHub\Editor\ExtensionLoader.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\ExtensionLoader.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\ExtensionLoader.cs.meta
+      projectPath: assets\Plugins\GitHub\Editor\ExtensionLoader.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\GitHub.Api.45.dll
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\GitHub.Api.45.dll
+      projectPath: assets\Plugins\GitHub\Editor\GitHub.Api.45.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb
+      projectPath: assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb.meta
+      projectPath: assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.meta
+      projectPath: assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\GitHub.Api.dll
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\GitHub.Api.dll
+      projectPath: assets\Plugins\GitHub\Editor\GitHub.Api.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb
+      projectPath: assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb.meta
+      projectPath: assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\GitHub.Api.dll.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\GitHub.Api.dll.meta
+      projectPath: assets\Plugins\GitHub\Editor\GitHub.Api.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\GitHub.Logging.dll
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\GitHub.Logging.dll
+      projectPath: assets\Plugins\GitHub\Editor\GitHub.Logging.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb
+      projectPath: assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb.meta
+      projectPath: assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\GitHub.Logging.dll.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\GitHub.Logging.dll.meta
+      projectPath: assets\Plugins\GitHub\Editor\GitHub.Logging.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll
+      projectPath: assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb
+      projectPath: assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb.meta
+      projectPath: assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.meta
+      projectPath: assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\GitHub.Unity.dll
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\GitHub.Unity.dll
+      projectPath: assets\Plugins\GitHub\Editor\GitHub.Unity.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb
+      projectPath: assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb.meta
+      projectPath: assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\GitHub.Unity.dll.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\GitHub.Unity.dll.meta
+      projectPath: assets\Plugins\GitHub\Editor\GitHub.Unity.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll
+      projectPath: assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll.mdb
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll.mdb
+      projectPath: assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll.mdb
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll.mdb.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll.mdb.meta
+      projectPath: assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll.mdb.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll.meta
+      projectPath: assets\Plugins\GitHub\Editor\GitHub.UnityShim.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\Mono.Posix.dll
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\Mono.Posix.dll
+      projectPath: assets\Plugins\GitHub\Editor\Mono.Posix.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\Mono.Posix.dll.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\Mono.Posix.dll.meta
+      projectPath: assets\Plugins\GitHub\Editor\Mono.Posix.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\QuickGuide.pdf
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\QuickGuide.pdf
+      projectPath: assets\Plugins\GitHub\Editor\QuickGuide.pdf
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\QuickGuide.pdf.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\QuickGuide.pdf.meta
+      projectPath: assets\Plugins\GitHub\Editor\QuickGuide.pdf.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll
+      projectPath: assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll.meta
+      projectPath: assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\System.Threading.dll
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\System.Threading.dll
+      projectPath: assets\Plugins\GitHub\Editor\System.Threading.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\System.Threading.dll.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\System.Threading.dll.meta
+      projectPath: assets\Plugins\GitHub\Editor\System.Threading.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\UnityAPIWrapper.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\UnityAPIWrapper.cs
+      projectPath: assets\Plugins\GitHub\Editor\UnityAPIWrapper.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\UnityAPIWrapper.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\UnityAPIWrapper.cs.meta
+      projectPath: assets\Plugins\GitHub\Editor\UnityAPIWrapper.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\big-logo@2x.png
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\big-logo@2x.png
+      projectPath: assets\Plugins\GitHub\Editor\big-logo@2x.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\big-logo@2x.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\big-logo@2x.png.meta
+      projectPath: assets\Plugins\GitHub\Editor\big-logo@2x.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\credits.txt
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\credits.txt
+      projectPath: assets\Plugins\GitHub\Editor\credits.txt
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\credits.txt.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\credits.txt.meta
+      projectPath: assets\Plugins\GitHub\Editor\credits.txt.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\eula.txt
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\eula.txt
+      projectPath: assets\Plugins\GitHub\Editor\eula.txt
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\eula.txt.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\eula.txt.meta
+      projectPath: assets\Plugins\GitHub\Editor\eula.txt.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\libsfw.bundle
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\libsfw.bundle
+      projectPath: assets\Plugins\GitHub\Editor\libsfw.bundle
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\libsfw.bundle.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\libsfw.bundle.meta
+      projectPath: assets\Plugins\GitHub\Editor\libsfw.bundle.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\libsfw.so
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\libsfw.so
+      projectPath: assets\Plugins\GitHub\Editor\libsfw.so
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\libsfw.so.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\libsfw.so.meta
+      projectPath: assets\Plugins\GitHub\Editor\libsfw.so.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\sfw.net.dll
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\sfw.net.dll
+      projectPath: assets\Plugins\GitHub\Editor\sfw.net.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\sfw.net.dll.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\sfw.net.dll.meta
+      projectPath: assets\Plugins\GitHub\Editor\sfw.net.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\x64.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\x64.meta
+      projectPath: assets\Plugins\GitHub\Editor\x64.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll
+      projectPath: assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll.meta
+      projectPath: assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\x64\sfw_x64.dll
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\x64\sfw_x64.dll
+      projectPath: assets\Plugins\GitHub\Editor\x64\sfw_x64.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\x64\sfw_x64.dll.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\x64\sfw_x64.dll.meta
+      projectPath: assets\Plugins\GitHub\Editor\x64\sfw_x64.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\x86.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\x86.meta
+      projectPath: assets\Plugins\GitHub\Editor\x86.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll
+      projectPath: assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll.meta
+      projectPath: assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\x86\sfw_x86.dll
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\x86\sfw_x86.dll
+      projectPath: assets\Plugins\GitHub\Editor\x86\sfw_x86.dll
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Plugins\GitHub\Editor\x86\sfw_x86.dll.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Plugins\GitHub\Editor\x86\sfw_x86.dll.meta
+      projectPath: assets\Plugins\GitHub\Editor\x86\sfw_x86.dll.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Scenes.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Scenes.meta
+      projectPath: assets\Scenes.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Scenes\CameraMovement.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Scenes\CameraMovement.cs
+      projectPath: assets\Scenes\CameraMovement.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Scenes\CameraMovement.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Scenes\CameraMovement.cs.meta
+      projectPath: assets\Scenes\CameraMovement.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Scenes\SampleScene.unity
+      fullPath: C:\Users\Vermia\TFG\assets\Scenes\SampleScene.unity
+      projectPath: assets\Scenes\SampleScene.unity
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Scenes\SampleScene.unity.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Scenes\SampleScene.unity.meta
+      projectPath: assets\Scenes\SampleScene.unity.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Squares.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Squares.meta
+      projectPath: assets\Squares.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Squares\BehSquare.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Squares\BehSquare.cs
+      projectPath: assets\Squares\BehSquare.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Squares\BehSquare.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Squares\BehSquare.cs.meta
+      projectPath: assets\Squares\BehSquare.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Squares\SquareEmpty.png
+      fullPath: C:\Users\Vermia\TFG\assets\Squares\SquareEmpty.png
+      projectPath: assets\Squares\SquareEmpty.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Squares\SquareEmpty.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Squares\SquareEmpty.png.meta
+      projectPath: assets\Squares\SquareEmpty.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Squares\SquarePre.prefab
+      fullPath: C:\Users\Vermia\TFG\assets\Squares\SquarePre.prefab
+      projectPath: assets\Squares\SquarePre.prefab
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Squares\SquarePre.prefab.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Squares\SquarePre.prefab.meta
+      projectPath: assets\Squares\SquarePre.prefab.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Squares\SquareWall.bmp
+      fullPath: C:\Users\Vermia\TFG\assets\Squares\SquareWall.bmp
+      projectPath: assets\Squares\SquareWall.bmp
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Squares\SquareWall.bmp.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Squares\SquareWall.bmp.meta
+      projectPath: assets\Squares\SquareWall.bmp.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Squares\SquareWall.png
+      fullPath: C:\Users\Vermia\TFG\assets\Squares\SquareWall.png
+      projectPath: assets\Squares\SquareWall.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Squares\SquareWall.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Squares\SquareWall.png.meta
+      projectPath: assets\Squares\SquareWall.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI.meta
+      fullPath: C:\Users\Vermia\TFG\assets\UI.meta
+      projectPath: assets\UI.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\BehUIRule.cs
+      fullPath: C:\Users\Vermia\TFG\assets\UI\BehUIRule.cs
+      projectPath: assets\UI\BehUIRule.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\BehUIRule.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\UI\BehUIRule.cs.meta
+      projectPath: assets\UI\BehUIRule.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\UIImages.meta
+      fullPath: C:\Users\Vermia\TFG\assets\UI\UIImages.meta
+      projectPath: assets\UI\UIImages.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\UIImages\heart.png
+      fullPath: C:\Users\Vermia\TFG\assets\UI\UIImages\heart.png
+      projectPath: assets\UI\UIImages\heart.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\UIImages\heart.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\UI\UIImages\heart.png.meta
+      projectPath: assets\UI\UIImages\heart.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\UIImages\star.png
+      fullPath: C:\Users\Vermia\TFG\assets\UI\UIImages\star.png
+      projectPath: assets\UI\UIImages\star.png
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\UI\UIImages\star.png.meta
+      fullPath: C:\Users\Vermia\TFG\assets\UI\UIImages\star.png.meta
+      projectPath: assets\UI\UIImages\star.png.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Utils.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Utils.meta
+      projectPath: assets\Utils.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Utils\Movement.cs
+      fullPath: C:\Users\Vermia\TFG\assets\Utils\Movement.cs
+      projectPath: assets\Utils\Movement.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: assets\Utils\Movement.cs.meta
+      fullPath: C:\Users\Vermia\TFG\assets\Utils\Movement.cs.meta
+      projectPath: assets\Utils\Movement.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0

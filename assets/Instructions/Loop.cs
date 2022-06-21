@@ -3,7 +3,7 @@
 
 
 public class Loop : Statement{
-    public int times {get; private set;}
+    public int times;
     public int currentIteration;
     public Action action;
 

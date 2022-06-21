@@ -10,14 +10,23 @@ public class BehUIAbove : MonoBehaviour
     BehCharacter player1;
     BehCharacter player2;
 
+    GameObject restartButtonGO;
+    BehBoard board;
+
     // Start is called before the first frame update
-    void Start()
-    {
+    void Awake()    {
+        board = GameObject.Find("Board").GetComponent<BehBoard>();
+    }
+
+    void Start(){
+        
+    }
+
+    public void setStuff(){
         player1 = BehBoard.player1.GetComponent<BehCharacter>();
-        player2 = BehBoard.player2.GetComponent<BehCharacter>();
+        //player2 = BehBoard.player2.GetComponent<BehCharacter>();
         hp1 = GameObject.Find("UIAboveHP1").GetComponent<Text>();
         points1 = GameObject.Find("UIAbovePoints1").GetComponent<Text>();
-
         updateValues();
     }
 
@@ -26,10 +35,11 @@ public class BehUIAbove : MonoBehaviour
         if(BehBoard.gameActive){
             updateValues();
         }
+
     }
 
     void updateValues(){
         hp1.text = player1.currHP.ToString() + "/" + player1.maxHP.ToString();
-        points1.text = player1.currStars.ToString() + "/" + player1.maxStars.ToString();
+        points1.text = player1.currStars.ToString() + "/" + board.totalStarsThisLevel;
     }
 }

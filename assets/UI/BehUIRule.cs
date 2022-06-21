@@ -18,12 +18,6 @@ public class BehUIRule : MonoBehaviour
 
     Text HP_value;
     Text Stars_value;
-    Text A_value;
-    Text B_value;
-    Text C_value;
-    Text D_value;
-    Text E_value;
-    Text F_value;
     Text name_value;
 
     
@@ -35,12 +29,6 @@ public class BehUIRule : MonoBehaviour
         wholeSeconds = 1f;
         UIWidth = GetComponent<RectTransform>().sizeDelta.x;
         //ruleArrayInfo = BehBoard.things[0].GetComponent<BehCharacter>().rules;
-        A_value = GameObject.Find("A_value").GetComponent<Text>();
-        B_value = GameObject.Find("B_value").GetComponent<Text>();
-        C_value = GameObject.Find("C_value").GetComponent<Text>();
-        D_value = GameObject.Find("D_value").GetComponent<Text>();
-        E_value = GameObject.Find("E_value").GetComponent<Text>();
-        F_value = GameObject.Find("F_value").GetComponent<Text>();
         HP_value = GameObject.Find("HP_value").GetComponent<Text>();
         Stars_value = GameObject.Find("Stars_value").GetComponent<Text>();
         name_value = GameObject.Find("Name_value").GetComponent<Text>();
@@ -52,46 +40,46 @@ public class BehUIRule : MonoBehaviour
 
      // Start is called before the first frame update
     void Start(){
-        newRuleInfo(BehBoard.player2.GetComponent<BehCharacter>());
+        //newRuleInfo(BehBoard.player2.GetComponent<BehCharacter>());
     }
 
     // Update is called once per frame
     void Update(){
         RectTransform rtrans = (RectTransform)GetComponentInParent(typeof(RectTransform));
         float scrW = Application.isEditor ? 2035f :  Screen.width;  //Segun si estamos en el editor de Unity o en ejecutable
-        float LPos=693.36f;
-        float RPos=1227.5f;
+        //float LPos=693.36f;
+        //float RPos=1227.5f;
 
-        switch(movingState){
-            case UIMovingState.standbyL:
-                if(Input.GetKey(KeyCode.Space)){
-                    movingState=UIMovingState.movingR;
-                }
-                GetComponent<RectTransform>().anchoredPosition = new Vector2(LPos, -108f); 
-            break;
-            case UIMovingState.standbyR:
-                if(Input.GetKey(KeyCode.Space)){
-                    movingState=UIMovingState.movingL;
-                }
-            break;
-            case UIMovingState.movingR:
-                if(GetComponent<RectTransform>().anchoredPosition.x >= RPos){
-                    movingState = UIMovingState.standbyR;
-                    break;
-                } 
-                GetComponent<RectTransform>().anchoredPosition += new Vector2(500 / wholeSeconds * Time.deltaTime, 0f); 
-                    
-            break;
-            
-            case UIMovingState.movingL:
-                if(GetComponent<RectTransform>().anchoredPosition.x <= LPos){
-                    movingState = UIMovingState.standbyL;
-                    break;
-                } 
-                GetComponent<RectTransform>().anchoredPosition -= new Vector2(500 / wholeSeconds * Time.deltaTime, 0f); 
-                
-            break;
-        }
+        //switch(movingState){
+        //    case UIMovingState.standbyL:
+        //        if(Input.GetKey(KeyCode.Space)){
+        //            movingState=UIMovingState.movingR;
+        //        }
+        //        GetComponent<RectTransform>().anchoredPosition = new Vector2(LPos, -108f); 
+        //    break;
+        //    case UIMovingState.standbyR:
+        //        if(Input.GetKey(KeyCode.Space)){
+        //            movingState=UIMovingState.movingL;
+        //        }
+        //    break;
+        //    case UIMovingState.movingR:
+        //        if(GetComponent<RectTransform>().anchoredPosition.x >= RPos){
+        //            movingState = UIMovingState.standbyR;
+        //            break;
+        //        } 
+        //        GetComponent<RectTransform>().anchoredPosition += new Vector2(500 / wholeSeconds * Time.deltaTime, 0f); 
+        //            
+        //    break;
+        //    
+        //    case UIMovingState.movingL:
+        //        if(GetComponent<RectTransform>().anchoredPosition.x <= LPos){
+        //            movingState = UIMovingState.standbyL;
+        //            break;
+        //        } 
+        //        GetComponent<RectTransform>().anchoredPosition -= new Vector2(500 / wholeSeconds * Time.deltaTime, 0f); 
+        //        
+        //    break;
+        //}
 
         if(BehBoard.newTurn){
             updateValues();
@@ -118,56 +106,58 @@ public class BehUIRule : MonoBehaviour
         
         for(int i=0 ; i<infoSource.statements.Count ; ++i){
             Statement stat = infoSource.statements[i];
+            float width=290;
+            float textWidthOffset=20;
+            float height=100;
+            int textSize=25;
+
             //fondo
             GameObject newImg = new GameObject();
             newImg.AddComponent(typeof(Image));
-            newImg.transform.SetParent(content.transform);
+            newImg.transform.SetParent(content.transform, false);
             newImg.transform.localScale = new Vector3(1,1,0);
-            newImg.GetComponent<RectTransform>().sizeDelta = new Vector2(500,200);
+            newImg.GetComponent<RectTransform>().sizeDelta = new Vector2(width,height);
             newImg.GetComponent<Image>().color = new Color(0,0,0,1);
 
             if(stat is Instruction){
-                Debug.Log("es una instruccion");
-                newImg.GetComponent<RectTransform>().sizeDelta = new Vector2(500,100);
+                newImg.GetComponent<RectTransform>().sizeDelta = new Vector2(width,height);
 
                 Instruction instr=stat as Instruction;
                 
-                string actText = calculateActionText(instr.action);
-                GameObject actTextGO = createText(newImg, new Vector2(20,0), actText, textColor, 20);
+                string actText = BehUIRule.calculateActionText(instr.action);
+                GameObject actTextGO = BehUIRule.createText(newImg, new Vector2(textWidthOffset,-5), actText, textColor, textSize);
                 actTextGO.GetComponent<Text>().horizontalOverflow=HorizontalWrapMode.Wrap;
                 actTextGO.GetComponent<RectTransform>().anchorMin = new Vector2(0,1);
                 actTextGO.GetComponent<RectTransform>().anchorMax = new Vector2(0,1);
                 actTextGO.GetComponent<RectTransform>().pivot = new Vector2(0,1);
-                actTextGO.GetComponent<RectTransform>().sizeDelta = new Vector2(500,110);
+                actTextGO.GetComponent<RectTransform>().sizeDelta = new Vector2(width-2*textWidthOffset,height);
             }
             else if(stat is Conditional){
-                Debug.Log("es un condicional");
 
                 Conditional condal=stat as Conditional;
 
-                string condText = calculateCondText(condal.cond);
-                string actText  = calculateActionText(condal.action);
-                string elseText = calculateActionText(condal.elseAction);
+                string condText = BehUIRule.calculateCondText(condal.cond);
+                string actText  = BehUIRule.calculateActionText(condal.action);
+                string elseText = BehUIRule.calculateActionText(condal.elseAction);
                 string fullText = "Si: " + condText + ", entonces: " + actText;
                 if(condal.elseAction!=null) fullText+= ", y en caso contrario: "+elseText;
-                GameObject condTextGO = createText(newImg, new Vector2(20,-5), fullText, textColor, 30);
+                GameObject condTextGO = BehUIRule.createText(newImg, new Vector2(textWidthOffset,-5), fullText, textColor, textSize);
                 condTextGO.GetComponent<Text>().horizontalOverflow=HorizontalWrapMode.Wrap;
                 condTextGO.GetComponent<RectTransform>().anchorMin = new Vector2(0,1);
                 condTextGO.GetComponent<RectTransform>().anchorMax = new Vector2(0,1);
                 condTextGO.GetComponent<RectTransform>().pivot = new Vector2(0,1);
-                condTextGO.GetComponent<RectTransform>().sizeDelta = new Vector2(500,200);         
+                condTextGO.GetComponent<RectTransform>().sizeDelta = new Vector2(width-2*textWidthOffset,height);         
             }
             else if(stat is Loop){
-                Debug.Log("es un bucle");
                 Loop loop = stat as Loop;
 
-                string fulltext = "En los siguientes " + loop.times + " turnos, " + calculateActionText(loop.action);
-                GameObject condTextGO = createText(newImg, new Vector2(20,-5), fulltext, textColor, 30);
+                string fulltext = "En los siguientes " + loop.times + " turnos, " + BehUIRule.calculateActionText(loop.action);
+                GameObject condTextGO = BehUIRule.createText(newImg, new Vector2(textWidthOffset,-5), fulltext, textColor, textSize);
                 condTextGO.GetComponent<Text>().horizontalOverflow=HorizontalWrapMode.Wrap;
                 condTextGO.GetComponent<RectTransform>().anchorMin = new Vector2(0,1);
                 condTextGO.GetComponent<RectTransform>().anchorMax = new Vector2(0,1);
                 condTextGO.GetComponent<RectTransform>().pivot = new Vector2(0,1);
-                condTextGO.GetComponent<RectTransform>().sizeDelta = new Vector2(500,200);
+                condTextGO.GetComponent<RectTransform>().sizeDelta = new Vector2(width-2*textWidthOffset,height);
             }
         }
     }
@@ -230,6 +220,7 @@ public class BehUIRule : MonoBehaviour
     }
 
     public void updateInventory(){
+        if(infoSource==null) return;
         //Limpiar reglas
         var content = GameObject.Find("InventoryContent");
         var auxList = new List<GameObject>();
@@ -283,12 +274,7 @@ public class BehUIRule : MonoBehaviour
 
     public void updateValues(){
 //Valores texto inmediatos
-        A_value.text = infoSource.variables[(int)Variables.A].ToString();
-        B_value.text = infoSource.variables[(int)Variables.B].ToString();
-        C_value.text = infoSource.variables[(int)Variables.C].ToString();
-        D_value.text = infoSource.variables[(int)Variables.D].ToString();
-        E_value.text = infoSource.variables[(int)Variables.E].ToString();
-        F_value.text = infoSource.variables[(int)Variables.F].ToString();
+        if(infoSource==null) return;
         name_value.text = infoSource.nombre.ToString();
         HP_value.text = infoSource.currHP.ToString() + "/" + infoSource.maxHP.ToString();
         Stars_value.text = infoSource.currStars.ToString() + "/" + infoSource.maxStars.ToString();
@@ -314,6 +300,7 @@ public class BehUIRule : MonoBehaviour
         Font font = (Font)Resources.GetBuiltinResource(typeof(Font), "Arial.ttf");
         txtConditionComp.font = font;
         txtConditionComp.fontSize = size;
+        txtConditionComp.resizeTextMaxSize = size;
         txtCondition.transform.SetParent(parent.transform);
         txtCondition.transform.localScale = new Vector2(1,1); //????????
         txtCondition.GetComponent<RectTransform>().localPosition = new Vector2(pos.x, pos.y);
@@ -370,6 +357,9 @@ public class BehUIRule : MonoBehaviour
                 case Objects.projectile:
                     res+= "Bala ";
                 break;
+                case Objects.breakablewall:
+                    res+= "Muro destructible ";
+                break;
             }
 
             switch(cond.affectedNumber){
@@ -392,32 +382,33 @@ public class BehUIRule : MonoBehaviour
     }
 
     public static string calculateActionText(Action action){
+        if(action == null) return "salto a la siguente";
         string res="";
 
-        foreach(SoftAction act in action.softActions){
-            string vari="";
-            switch(act.affectedVariable){
-                case Variables.A: vari= "A "; break;
-                case Variables.B: vari= "B "; break;
-                case Variables.C: vari= "C "; break;
-                case Variables.D: vari= "D "; break;
-                case Variables.E: vari= "E "; break;
-                case Variables.F: vari= "F "; break;
-            }
-
-            switch(act.softAction){
-                case SoftActions.setVariable:
-                    res+= "Le doy el valor " + act.affectedNumber.ToString() + " a mi variable " + vari;
-                break;
-                case SoftActions.incVariable:
-                    res+= "Sumo 1 a mi variable " + vari;
-                break;
-                case SoftActions.decVariable:
-                    res+= "Resto 1 a mi variable " + vari;
-                break;
-            }
-            res+="\n";
-        }
+        //foreach(SoftAction act in action.softActions){
+        //    string vari="";
+        //    switch(act.affectedVariable){
+        //        case Variables.A: vari= "A "; break;
+        //        case Variables.B: vari= "B "; break;
+        //        case Variables.C: vari= "C "; break;
+        //        case Variables.D: vari= "D "; break;
+        //        case Variables.E: vari= "E "; break;
+        //        case Variables.F: vari= "F "; break;
+        //    }
+//
+        //    switch(act.softAction){
+        //        case SoftActions.setVariable:
+        //            res+= "Le doy el valor " + act.affectedNumber.ToString() + " a mi variable " + vari;
+        //        break;
+        //        case SoftActions.incVariable:
+        //            res+= "Sumo 1 a mi variable " + vari;
+        //        break;
+        //        case SoftActions.decVariable:
+        //            res+= "Resto 1 a mi variable " + vari;
+        //        break;
+        //    }
+        //    res+="\n";
+        //}
 
         switch(action.hardAction){
             case HardActions.move:      res += "Me muevo "; break;
@@ -433,7 +424,7 @@ public class BehUIRule : MonoBehaviour
             default: break;
         }
 
-        if(action.hardAction==HardActions.doNothing) res="No hago nada";
+        if(action.hardAction==HardActions.doNothing || action.affectedDirection==Dir4.center) res="No hago nada";
         return res;
     }
 }

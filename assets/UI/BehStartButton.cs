@@ -18,6 +18,6 @@ public class BehStartButton : MonoBehaviour
 
     void OnClick(){
         Debug.Log("Start");
-        BehBoard.startGame();
+        GameObject.Find("Board").GetComponent<BehBoard>().startGame();
     }
 }
