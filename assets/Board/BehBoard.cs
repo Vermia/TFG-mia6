@@ -21,6 +21,8 @@ public class BehBoard : MonoBehaviour
     public Sprite breakableSprite;
     public Sprite goalSprite;
 
+    public GameObject victoryText;
+
     static public GameObject[,] board{get; private set;}
     static public List<GameObject> things{get; private set;}
     static public bool newTurn{get; private set;}
@@ -65,6 +67,9 @@ public class BehBoard : MonoBehaviour
         gameActive=false;
         turnText = GameObject.Find("Turn").GetComponent<Text>();
         squareWH = 1.28f; // 64 * 2 / 100
+
+        victoryText=GameObject.Find("VictoryText");
+        victoryText.SetActive(false);
 
         restartButtongGO=GameObject.Find("RestartButton");
         restartButtongGO.GetComponent<Button>().onClick.AddListener( ()=>{
@@ -112,8 +117,8 @@ public class BehBoard : MonoBehaviour
 
     public void startGame(){
         if(board==null){
-            GameObject.Find("Board").GetComponent<BehBoard>().generateMap(0);
-            gameActive = false;
+            //GameObject.Find("Board").GetComponent<BehBoard>().generateMap(0);
+            //gameActive = false;
         }
         else{
             gameActive = true;
@@ -318,6 +323,8 @@ public class BehBoard : MonoBehaviour
         }
         else if(seed==6){
             map2();
+        } else if(seed==7){
+            finishWithVictory();
         }
         
     }
@@ -343,6 +350,12 @@ public class BehBoard : MonoBehaviour
         int actions = GameObject.Find("UICanvasImageEdit").GetComponent<BehUIEdit>().ruleCounter;
         deltaPoints = scoreScreenGO.GetComponent<BehUIScore>().loadValues(40, stars, actions);
         scoreScreenGO.GetComponent<BehUIScore>().comeHere();
+    }
+
+    void finishWithVictory(){
+        cleanEverything();
+        victoryText.SetActive(true);
+        ruleBlockerRetractable.comeHere();
     }
 
     public void nextLevel(){

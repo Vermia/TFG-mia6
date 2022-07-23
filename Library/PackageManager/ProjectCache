@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637743833190060529
-    m_Hash: 238244261
+      ticks: 637941903311223560
+    m_Hash: 1925581752
   m_LockFileStatus:
     m_FilePath: C:/Users/Vermia/TFG/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637743833337365785
-    m_Hash: 201114752
+      ticks: 637941903311223560
+    m_Hash: 3207447393
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -3409,12 +3409,38 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 0.0.12-preview.2
+        - 0.0.12-preview.5
+        - 0.0.12-preview.8
+        - 0.0.12-preview.10
+        - 0.0.12-preview.11
+        - 0.0.12-preview.13
+        - 0.0.12-preview.17
+        - 0.0.12-preview.19
+        - 0.0.12-preview.20
+        - 1.0.0-preview.1
+        - 1.0.1
+        - 1.1.0-preview.1
         - 1.1.0
         - 1.2.1
+        - 1.2.4
         - 1.2.5
         compatible:
+        - 0.0.12-preview.2
+        - 0.0.12-preview.5
+        - 0.0.12-preview.8
+        - 0.0.12-preview.10
+        - 0.0.12-preview.11
+        - 0.0.12-preview.13
+        - 0.0.12-preview.17
+        - 0.0.12-preview.19
+        - 0.0.12-preview.20
+        - 1.0.0-preview.1
+        - 1.0.1
+        - 1.1.0-preview.1
         - 1.1.0
         - 1.2.1
+        - 1.2.4
         - 1.2.5
         verified: 1.2.5
       dependencies: []
@@ -3433,7 +3459,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 636984649280000000
       documentationUrl: 
       hasRepository: 1
       repository:
