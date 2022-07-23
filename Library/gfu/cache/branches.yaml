@@ -13,12 +13,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 2
-  lastUpdatedAtString: 2022-06-20T19:11:58.892+02:00
-  initializedAtString: 2022-06-20T18:01:58.749+02:00
+  lastUpdatedAtString: 2022-07-23T19:01:35.786+02:00
+  initializedAtString: 2022-07-23T19:01:35.728+02:00
   localBranches:
-  - name: master
+  - name: build
     tracking: 
-  remoteBranches: []
+  - name: main
+    tracking: tfg-mia6/main
+  - name: master
+    tracking: tfg-mia6/master
+  - name: only_build
+    tracking: 
+  remoteBranches:
+  - name: tfg-mia6/main
+    tracking: '[None]'
+  - name: tfg-mia6/master
+    tracking: '[None]'
   remotes:
   - name: tfg-mia6
     url: https://github.com/Vermia/TFG-mia6
@@ -29,17 +39,50 @@ MonoBehaviour:
     token: 
   localConfigBranches:
     keys:
+    - build
+    - main
     - master
+    - only_build
     values:
+    - name: build
+      remote:
+        name: 
+        url: 
+      trackingBranch: 
+    - name: main
+      remote:
+        name: tfg-mia6
+        url: https://github.com/Vermia/TFG-mia6
+      trackingBranch: main
     - name: master
+      remote:
+        name: tfg-mia6
+        url: https://github.com/Vermia/TFG-mia6
+      trackingBranch: master
+    - name: only_build
       remote:
         name: 
         url: 
       trackingBranch: 
   remoteConfigBranches:
-    keys: []
-    subKeys: []
-    subKeyValues: []
+    keys:
+    - tfg-mia6
+    subKeys:
+    - Values:
+      - main
+      - master
+    subKeyValues:
+    - Values:
+      - name: main
+        remote:
+          name: tfg-mia6
+          url: https://github.com/Vermia/TFG-mia6
+        trackingBranch: 
+      - name: master
+        remote:
+          name: tfg-mia6
+          url: https://github.com/Vermia/TFG-mia6
+        trackingBranch: 
   configRemotes:
     keys:
     - tfg-mia6

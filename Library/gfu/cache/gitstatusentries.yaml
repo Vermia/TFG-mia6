@@ -13,9 +13,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 6
-  lastUpdatedAtString: 2022-07-23T18:53:31.390+02:00
+  lastUpdatedAtString: 2022-07-23T19:07:08.364+02:00
   initializedAtString: 2022-07-23T18:31:28.593+02:00
   entries:
+  - path: .gitignore
+    fullPath: C:\Users\Vermia\TFG\.gitignore
+    projectPath: .gitignore
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
   - path: .vscode\launch.json
     fullPath: C:\Users\Vermia\TFG\.vscode\launch.json
     projectPath: .vscode\launch.json
@@ -49,12 +55,6 @@ MonoBehaviour:
   - path: assets\Board.meta
     fullPath: C:\Users\Vermia\TFG\assets\Board.meta
     projectPath: assets\Board.meta
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: assets\Board\BehBoard.cs
-    fullPath: C:\Users\Vermia\TFG\assets\Board\BehBoard.cs
-    projectPath: assets\Board\BehBoard.cs
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -712,6 +712,12 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: assets\UI\BehUIEdit.cs
+    fullPath: C:\Users\Vermia\TFG\assets\UI\BehUIEdit.cs
+    projectPath: assets\UI\BehUIEdit.cs
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
   - path: assets\UI\BehUIEdit.cs.meta
     fullPath: C:\Users\Vermia\TFG\assets\UI\BehUIEdit.cs.meta
     projectPath: assets\UI\BehUIEdit.cs.meta
@@ -880,15 +886,39 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Build\TFG_Data\RuntimeInitializeOnLoads.json
-    fullPath: C:\Users\Vermia\TFG\Build\TFG_Data\RuntimeInitializeOnLoads.json
-    projectPath: Build\TFG_Data\RuntimeInitializeOnLoads.json
+  - path: Build\TFG_Data\globalgamemanagers
+    fullPath: C:\Users\Vermia\TFG\Build\TFG_Data\globalgamemanagers
+    projectPath: Build\TFG_Data\globalgamemanagers
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Library\APIUpdater\project-dependencies.graph
-    fullPath: C:\Users\Vermia\TFG\Library\APIUpdater\project-dependencies.graph
-    projectPath: Library\APIUpdater\project-dependencies.graph
+  - path: Build\TFG_Data\globalgamemanagers.assets
+    fullPath: C:\Users\Vermia\TFG\Build\TFG_Data\globalgamemanagers.assets
+    projectPath: Build\TFG_Data\globalgamemanagers.assets
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Build\TFG_Data\level0
+    fullPath: C:\Users\Vermia\TFG\Build\TFG_Data\level0
+    projectPath: Build\TFG_Data\level0
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Build\TFG_Data\Managed\Assembly-CSharp.dll
+    fullPath: C:\Users\Vermia\TFG\Build\TFG_Data\Managed\Assembly-CSharp.dll
+    projectPath: Build\TFG_Data\Managed\Assembly-CSharp.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Build\TFG_Data\Managed\Assembly-CSharp.pdb
+    fullPath: C:\Users\Vermia\TFG\Build\TFG_Data\Managed\Assembly-CSharp.pdb
+    projectPath: Build\TFG_Data\Managed\Assembly-CSharp.pdb
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Build\TFG_Data\RuntimeInitializeOnLoads.json
+    fullPath: C:\Users\Vermia\TFG\Build\TFG_Data\RuntimeInitializeOnLoads.json
+    projectPath: Build\TFG_Data\RuntimeInitializeOnLoads.json
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -904,78 +934,6 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Library\Artifacts\1d\1dee443a97f7fe28d251fcbc74a522df
-    fullPath: C:\Users\Vermia\TFG\Library\Artifacts\1d\1dee443a97f7fe28d251fcbc74a522df
-    projectPath: Library\Artifacts\1d\1dee443a97f7fe28d251fcbc74a522df
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\Artifacts\2e\2ea12ff7d901647c7ca2ca32c355719d
-    fullPath: C:\Users\Vermia\TFG\Library\Artifacts\2e\2ea12ff7d901647c7ca2ca32c355719d
-    projectPath: Library\Artifacts\2e\2ea12ff7d901647c7ca2ca32c355719d
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\Artifacts\3f\3f2f7bc4122dd92424cd7c744f58768b
-    fullPath: C:\Users\Vermia\TFG\Library\Artifacts\3f\3f2f7bc4122dd92424cd7c744f58768b
-    projectPath: Library\Artifacts\3f\3f2f7bc4122dd92424cd7c744f58768b
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\Artifacts\46\46b35aeb15e30b642d1a550d9aadf6b0
-    fullPath: C:\Users\Vermia\TFG\Library\Artifacts\46\46b35aeb15e30b642d1a550d9aadf6b0
-    projectPath: Library\Artifacts\46\46b35aeb15e30b642d1a550d9aadf6b0
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\Artifacts\7f\7ff5006c24748f1a6f5db980f37abb83
-    fullPath: C:\Users\Vermia\TFG\Library\Artifacts\7f\7ff5006c24748f1a6f5db980f37abb83
-    projectPath: Library\Artifacts\7f\7ff5006c24748f1a6f5db980f37abb83
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\Artifacts\87\870462c490e8f8ebd50893d0e04b1ecd
-    fullPath: C:\Users\Vermia\TFG\Library\Artifacts\87\870462c490e8f8ebd50893d0e04b1ecd
-    projectPath: Library\Artifacts\87\870462c490e8f8ebd50893d0e04b1ecd
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\Artifacts\8e\8e97e412d63895951cb8ed83489949b7
-    fullPath: C:\Users\Vermia\TFG\Library\Artifacts\8e\8e97e412d63895951cb8ed83489949b7
-    projectPath: Library\Artifacts\8e\8e97e412d63895951cb8ed83489949b7
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\Artifacts\8f\8f3eaaf6ce659d7710373ead0c345204
-    fullPath: C:\Users\Vermia\TFG\Library\Artifacts\8f\8f3eaaf6ce659d7710373ead0c345204
-    projectPath: Library\Artifacts\8f\8f3eaaf6ce659d7710373ead0c345204
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\Artifacts\96\96e8203c08d8db17be0758dfaa2f4d55
-    fullPath: C:\Users\Vermia\TFG\Library\Artifacts\96\96e8203c08d8db17be0758dfaa2f4d55
-    projectPath: Library\Artifacts\96\96e8203c08d8db17be0758dfaa2f4d55
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\Artifacts\eb\ebff0c16681a569e4ad1212c2c425ad1
-    fullPath: C:\Users\Vermia\TFG\Library\Artifacts\eb\ebff0c16681a569e4ad1212c2c425ad1
-    projectPath: Library\Artifacts\eb\ebff0c16681a569e4ad1212c2c425ad1
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\Artifacts\ed\edec1fa30d7519fb58c7c01efed18d1f
-    fullPath: C:\Users\Vermia\TFG\Library\Artifacts\ed\edec1fa30d7519fb58c7c01efed18d1f
-    projectPath: Library\Artifacts\ed\edec1fa30d7519fb58c7c01efed18d1f
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\Artifacts\f4\f4489de9e8026d751a7f824b650db2da
-    fullPath: C:\Users\Vermia\TFG\Library\Artifacts\f4\f4489de9e8026d751a7f824b650db2da
-    projectPath: Library\Artifacts\f4\f4489de9e8026d751a7f824b650db2da
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
   - path: Library\BuildPlayerData\Editor\TypeDb-All.json
     fullPath: C:\Users\Vermia\TFG\Library\BuildPlayerData\Editor\TypeDb-All.json
     projectPath: Library\BuildPlayerData\Editor\TypeDb-All.json
@@ -1006,12 +964,6 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Library\EditorInstance.json
-    fullPath: C:\Users\Vermia\TFG\Library\EditorInstance.json
-    projectPath: Library\EditorInstance.json
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
   - path: Library\EditorSnapSettings.asset
     fullPath: C:\Users\Vermia\TFG\Library\EditorSnapSettings.asset
     projectPath: Library\EditorSnapSettings.asset
@@ -1060,12 +1012,12 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Library\InspectorExpandedItems.asset
-    fullPath: C:\Users\Vermia\TFG\Library\InspectorExpandedItems.asset
-    projectPath: Library\InspectorExpandedItems.asset
+  - path: Library\LastBuild.buildreport
+    fullPath: C:\Users\Vermia\TFG\Library\LastBuild.buildreport
+    projectPath: Library\LastBuild.buildreport
     originalPath: 
     indexStatus: 0
-    workTreeStatus: 3
+    workTreeStatus: 5
   - path: Library\LastSceneManagerSetup.txt
     fullPath: C:\Users\Vermia\TFG\Library\LastSceneManagerSetup.txt
     projectPath: Library\LastSceneManagerSetup.txt
@@ -39001,6 +38953,36 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: Library\PlayerDataCache\Win64\Data\globalgamemanagers
+    fullPath: C:\Users\Vermia\TFG\Library\PlayerDataCache\Win64\Data\globalgamemanagers
+    projectPath: Library\PlayerDataCache\Win64\Data\globalgamemanagers
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\PlayerDataCache\Win64\Data\globalgamemanagers.assets
+    fullPath: C:\Users\Vermia\TFG\Library\PlayerDataCache\Win64\Data\globalgamemanagers.assets
+    projectPath: Library\PlayerDataCache\Win64\Data\globalgamemanagers.assets
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\PlayerDataCache\Win64\Data\level0
+    fullPath: C:\Users\Vermia\TFG\Library\PlayerDataCache\Win64\Data\level0
+    projectPath: Library\PlayerDataCache\Win64\Data\level0
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\PlayerDataCache\Win64\Data\Managed\Assembly-CSharp.dll
+    fullPath: C:\Users\Vermia\TFG\Library\PlayerDataCache\Win64\Data\Managed\Assembly-CSharp.dll
+    projectPath: Library\PlayerDataCache\Win64\Data\Managed\Assembly-CSharp.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library\PlayerDataCache\Win64\Data\Managed\Assembly-CSharp.pdb
+    fullPath: C:\Users\Vermia\TFG\Library\PlayerDataCache\Win64\Data\Managed\Assembly-CSharp.pdb
+    projectPath: Library\PlayerDataCache\Win64\Data\Managed\Assembly-CSharp.pdb
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Library\PlayerDataCache\Win64\Data\RuntimeInitializeOnLoads.json
     fullPath: C:\Users\Vermia\TFG\Library\PlayerDataCache\Win64\Data\RuntimeInitializeOnLoads.json
     projectPath: Library\PlayerDataCache\Win64\Data\RuntimeInitializeOnLoads.json
@@ -39031,24 +39013,6 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll
-    fullPath: C:\Users\Vermia\TFG\Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll
-    projectPath: Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.pdb
-    fullPath: C:\Users\Vermia\TFG\Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.pdb
-    projectPath: Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.pdb
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Library\ShaderCache\EditorEncounteredVariants
-    fullPath: C:\Users\Vermia\TFG\Library\ShaderCache\EditorEncounteredVariants
-    projectPath: Library\ShaderCache\EditorEncounteredVariants
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: Library\SourceAssetDB
     fullPath: C:\Users\Vermia\TFG\Library\SourceAssetDB
     projectPath: Library\SourceAssetDB
@@ -39067,36 +39031,18 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Library\StateCache\SceneView\8c\8cd7c613bf844de3b80696e27a479d5e.json
-    fullPath: C:\Users\Vermia\TFG\Library\StateCache\SceneView\8c\8cd7c613bf844de3b80696e27a479d5e.json
-    projectPath: Library\StateCache\SceneView\8c\8cd7c613bf844de3b80696e27a479d5e.json
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: Logs\ApiUpdaterCheck.txt
     fullPath: C:\Users\Vermia\TFG\Logs\ApiUpdaterCheck.txt
     projectPath: Logs\ApiUpdaterCheck.txt
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Logs\AssetImportWorker0.log
-    fullPath: C:\Users\Vermia\TFG\Logs\AssetImportWorker0.log
-    projectPath: Logs\AssetImportWorker0.log
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
   - path: Logs\Packages-Update.log
     fullPath: C:\Users\Vermia\TFG\Logs\Packages-Update.log
     projectPath: Logs\Packages-Update.log
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Logs\shadercompiler-AssetImportWorker0.log
-    fullPath: C:\Users\Vermia\TFG\Logs\shadercompiler-AssetImportWorker0.log
-    projectPath: Logs\shadercompiler-AssetImportWorker0.log
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
   - path: Logs\shadercompiler-UnityShaderCompiler.exe0.log
     fullPath: C:\Users\Vermia\TFG\Logs\shadercompiler-UnityShaderCompiler.exe0.log
     projectPath: Logs\shadercompiler-UnityShaderCompiler.exe0.log
@@ -39283,510 +39229,6 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Temp\__Backupscenes\0.backup
-    fullPath: C:\Users\Vermia\TFG\Temp\__Backupscenes\0.backup
-    projectPath: Temp\__Backupscenes\0.backup
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Assembly-CSharp.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Assembly-CSharp.dll.hash
-    projectPath: Temp\Assembly-CSharp.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Assembly-CSharp-Editor-firstpass.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Assembly-CSharp-Editor-firstpass.dll.hash
-    projectPath: Temp\Assembly-CSharp-Editor-firstpass.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\CompilationLog.txt
-    fullPath: C:\Users\Vermia\TFG\Temp\CompilationLog.txt
-    projectPath: Temp\CompilationLog.txt
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\PsdPlugin.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\PsdPlugin.dll.hash
-    projectPath: Temp\PsdPlugin.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.2D.Animation.Editor.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.2D.Animation.Editor.dll.hash
-    projectPath: Temp\Unity.2D.Animation.Editor.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.2D.Animation.Runtime.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.2D.Animation.Runtime.dll.hash
-    projectPath: Temp\Unity.2D.Animation.Runtime.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.2D.Animation.Triangle.Runtime.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.2D.Animation.Triangle.Runtime.dll.hash
-    projectPath: Temp\Unity.2D.Animation.Triangle.Runtime.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.2D.Common.Editor.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.2D.Common.Editor.dll.hash
-    projectPath: Temp\Unity.2D.Common.Editor.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.2D.Common.Runtime.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.2D.Common.Runtime.dll.hash
-    projectPath: Temp\Unity.2D.Common.Runtime.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.2D.IK.Editor.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.2D.IK.Editor.dll.hash
-    projectPath: Temp\Unity.2D.IK.Editor.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.2D.IK.Runtime.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.2D.IK.Runtime.dll.hash
-    projectPath: Temp\Unity.2D.IK.Runtime.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.2D.Path.Editor.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.2D.Path.Editor.dll.hash
-    projectPath: Temp\Unity.2D.Path.Editor.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.2D.PixelPerfect.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.2D.PixelPerfect.dll.hash
-    projectPath: Temp\Unity.2D.PixelPerfect.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.2D.PixelPerfect.Editor.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.2D.PixelPerfect.Editor.dll.hash
-    projectPath: Temp\Unity.2D.PixelPerfect.Editor.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.2D.Psdimporter.Editor.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.2D.Psdimporter.Editor.dll.hash
-    projectPath: Temp\Unity.2D.Psdimporter.Editor.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.2D.Sprite.Editor.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.2D.Sprite.Editor.dll.hash
-    projectPath: Temp\Unity.2D.Sprite.Editor.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.2D.SpriteShape.Editor.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.2D.SpriteShape.Editor.dll.hash
-    projectPath: Temp\Unity.2D.SpriteShape.Editor.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.2D.SpriteShape.Runtime.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.2D.SpriteShape.Runtime.dll.hash
-    projectPath: Temp\Unity.2D.SpriteShape.Runtime.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.2D.Tilemap.Editor.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.2D.Tilemap.Editor.dll.hash
-    projectPath: Temp\Unity.2D.Tilemap.Editor.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.CollabProxy.Editor.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.CollabProxy.Editor.dll.hash
-    projectPath: Temp\Unity.CollabProxy.Editor.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.InternalAPIEditorBridge.001.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.InternalAPIEditorBridge.001.dll.hash
-    projectPath: Temp\Unity.InternalAPIEditorBridge.001.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.InternalAPIEngineBridge.001.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.InternalAPIEngineBridge.001.dll.hash
-    projectPath: Temp\Unity.InternalAPIEngineBridge.001.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.Mathematics.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.Mathematics.dll.hash
-    projectPath: Temp\Unity.Mathematics.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.Mathematics.Editor.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.Mathematics.Editor.dll.hash
-    projectPath: Temp\Unity.Mathematics.Editor.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.PlasticSCM.Editor.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.PlasticSCM.Editor.dll.hash
-    projectPath: Temp\Unity.PlasticSCM.Editor.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.Rider.Editor.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.Rider.Editor.dll.hash
-    projectPath: Temp\Unity.Rider.Editor.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.Services.Core.Editor.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.Services.Core.Editor.dll.hash
-    projectPath: Temp\Unity.Services.Core.Editor.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.TextMeshPro.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.TextMeshPro.dll.hash
-    projectPath: Temp\Unity.TextMeshPro.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.TextMeshPro.Editor.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.TextMeshPro.Editor.dll.hash
-    projectPath: Temp\Unity.TextMeshPro.Editor.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.Timeline.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.Timeline.dll.hash
-    projectPath: Temp\Unity.Timeline.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.Timeline.Editor.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.Timeline.Editor.dll.hash
-    projectPath: Temp\Unity.Timeline.Editor.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.VisualStudio.Editor.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.VisualStudio.Editor.dll.hash
-    projectPath: Temp\Unity.VisualStudio.Editor.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\Unity.VSCode.Editor.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\Unity.VSCode.Editor.dll.hash
-    projectPath: Temp\Unity.VSCode.Editor.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityEditor.TestRunner.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityEditor.TestRunner.dll.hash
-    projectPath: Temp\UnityEditor.TestRunner.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityEditor.UI.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityEditor.UI.dll.hash
-    projectPath: Temp\UnityEditor.UI.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityEngine.TestRunner.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityEngine.TestRunner.dll.hash
-    projectPath: Temp\UnityEngine.TestRunner.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityEngine.UI.dll.hash
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityEngine.UI.dll.hash
-    projectPath: Temp\UnityEngine.UI.dll.hash
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityLockfile
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityLockfile
-    projectPath: Temp\UnityLockfile
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-0fbfcbf36cba70345abd6ab903828e9c
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-0fbfcbf36cba70345abd6ab903828e9c
-    projectPath: Temp\UnityTempFile-0fbfcbf36cba70345abd6ab903828e9c
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-1c9fb127b26141e4f901c50c47e670ce
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-1c9fb127b26141e4f901c50c47e670ce
-    projectPath: Temp\UnityTempFile-1c9fb127b26141e4f901c50c47e670ce
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-2d20ab3dd39560849b533ca0acbb0c8d
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-2d20ab3dd39560849b533ca0acbb0c8d
-    projectPath: Temp\UnityTempFile-2d20ab3dd39560849b533ca0acbb0c8d
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-36d3f32729bec924ab99a9e5b7edb1a5
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-36d3f32729bec924ab99a9e5b7edb1a5
-    projectPath: Temp\UnityTempFile-36d3f32729bec924ab99a9e5b7edb1a5
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-37c6025f861928d4c9c334a4c40c0d41
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-37c6025f861928d4c9c334a4c40c0d41
-    projectPath: Temp\UnityTempFile-37c6025f861928d4c9c334a4c40c0d41
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-3982b661a61202046ade259c9b586cee
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-3982b661a61202046ade259c9b586cee
-    projectPath: Temp\UnityTempFile-3982b661a61202046ade259c9b586cee
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-3a5a0e86b62f79f4c9db8d10b11f1428
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-3a5a0e86b62f79f4c9db8d10b11f1428
-    projectPath: Temp\UnityTempFile-3a5a0e86b62f79f4c9db8d10b11f1428
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-419b61724135c8a48adcbc62e38e4f49
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-419b61724135c8a48adcbc62e38e4f49
-    projectPath: Temp\UnityTempFile-419b61724135c8a48adcbc62e38e4f49
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-4af122299dcd5764ab7821e737e33dc4
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-4af122299dcd5764ab7821e737e33dc4
-    projectPath: Temp\UnityTempFile-4af122299dcd5764ab7821e737e33dc4
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-4bba7001303e7204ab1a956c314cf8f0
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-4bba7001303e7204ab1a956c314cf8f0
-    projectPath: Temp\UnityTempFile-4bba7001303e7204ab1a956c314cf8f0
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-4cb7e0fdaa821244d842569f10cb6095
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-4cb7e0fdaa821244d842569f10cb6095
-    projectPath: Temp\UnityTempFile-4cb7e0fdaa821244d842569f10cb6095
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-560c7754861400b4cbc58bc36e426f4d
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-560c7754861400b4cbc58bc36e426f4d
-    projectPath: Temp\UnityTempFile-560c7754861400b4cbc58bc36e426f4d
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-61604eb6d85efad489eaed66ab335e9b
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-61604eb6d85efad489eaed66ab335e9b
-    projectPath: Temp\UnityTempFile-61604eb6d85efad489eaed66ab335e9b
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-66e384fc8af62c14e844540f7cba3f1a
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-66e384fc8af62c14e844540f7cba3f1a
-    projectPath: Temp\UnityTempFile-66e384fc8af62c14e844540f7cba3f1a
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-6da7611e21c1bb54f823d2fba9094b50
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-6da7611e21c1bb54f823d2fba9094b50
-    projectPath: Temp\UnityTempFile-6da7611e21c1bb54f823d2fba9094b50
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-6e2141f62298ffa4b800178c15d274f5
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-6e2141f62298ffa4b800178c15d274f5
-    projectPath: Temp\UnityTempFile-6e2141f62298ffa4b800178c15d274f5
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-6fa0ed08317b5eb4fbd0ef04ebfca68a
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-6fa0ed08317b5eb4fbd0ef04ebfca68a
-    projectPath: Temp\UnityTempFile-6fa0ed08317b5eb4fbd0ef04ebfca68a
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-727f975d5229e0a47bccb7667a796d0f
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-727f975d5229e0a47bccb7667a796d0f
-    projectPath: Temp\UnityTempFile-727f975d5229e0a47bccb7667a796d0f
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-844c31fd137c8e74591aad1c834aaa35
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-844c31fd137c8e74591aad1c834aaa35
-    projectPath: Temp\UnityTempFile-844c31fd137c8e74591aad1c834aaa35
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-87fd7981b223c5944aa6d5a90eda56de
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-87fd7981b223c5944aa6d5a90eda56de
-    projectPath: Temp\UnityTempFile-87fd7981b223c5944aa6d5a90eda56de
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-8bd4c537ea0c7874d8c16ae218dc5369
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-8bd4c537ea0c7874d8c16ae218dc5369
-    projectPath: Temp\UnityTempFile-8bd4c537ea0c7874d8c16ae218dc5369
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-96c86f9488cf08143921590ae69b4560
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-96c86f9488cf08143921590ae69b4560
-    projectPath: Temp\UnityTempFile-96c86f9488cf08143921590ae69b4560
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-9a32e1c52f7b12c4788bc5445976107b
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-9a32e1c52f7b12c4788bc5445976107b
-    projectPath: Temp\UnityTempFile-9a32e1c52f7b12c4788bc5445976107b
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-9b9a685d4e3c1ce46970f77a02645e57
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-9b9a685d4e3c1ce46970f77a02645e57
-    projectPath: Temp\UnityTempFile-9b9a685d4e3c1ce46970f77a02645e57
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-9ba40144994ca9648a05d467dc13b32e
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-9ba40144994ca9648a05d467dc13b32e
-    projectPath: Temp\UnityTempFile-9ba40144994ca9648a05d467dc13b32e
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-9e039860b5b27e74ca1467dc48a1fabc
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-9e039860b5b27e74ca1467dc48a1fabc
-    projectPath: Temp\UnityTempFile-9e039860b5b27e74ca1467dc48a1fabc
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-aac8898a6836a3b4fbfe5a70d4580254
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-aac8898a6836a3b4fbfe5a70d4580254
-    projectPath: Temp\UnityTempFile-aac8898a6836a3b4fbfe5a70d4580254
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-b264abead02cae54fa352dd647b83122
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-b264abead02cae54fa352dd647b83122
-    projectPath: Temp\UnityTempFile-b264abead02cae54fa352dd647b83122
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-ba4e46f67eb32f3499cf3b5168a57364
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-ba4e46f67eb32f3499cf3b5168a57364
-    projectPath: Temp\UnityTempFile-ba4e46f67eb32f3499cf3b5168a57364
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-bab9319b334cdcd49bbd3feb148d18a8
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-bab9319b334cdcd49bbd3feb148d18a8
-    projectPath: Temp\UnityTempFile-bab9319b334cdcd49bbd3feb148d18a8
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-bc5521b0a0b97a24480188122873d893
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-bc5521b0a0b97a24480188122873d893
-    projectPath: Temp\UnityTempFile-bc5521b0a0b97a24480188122873d893
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-c5da0c37cb3680b40a6c82a5cf73a782
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-c5da0c37cb3680b40a6c82a5cf73a782
-    projectPath: Temp\UnityTempFile-c5da0c37cb3680b40a6c82a5cf73a782
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-c86490b49a13d6c42bf456fda791d3c4
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-c86490b49a13d6c42bf456fda791d3c4
-    projectPath: Temp\UnityTempFile-c86490b49a13d6c42bf456fda791d3c4
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-cee7a30a5fac64f45b63226981be5670
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-cee7a30a5fac64f45b63226981be5670
-    projectPath: Temp\UnityTempFile-cee7a30a5fac64f45b63226981be5670
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-d961241a18eedd642a0175ae805d204c
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-d961241a18eedd642a0175ae805d204c
-    projectPath: Temp\UnityTempFile-d961241a18eedd642a0175ae805d204c
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-dacd632bb49a113469522198605bdc53
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-dacd632bb49a113469522198605bdc53
-    projectPath: Temp\UnityTempFile-dacd632bb49a113469522198605bdc53
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-dca9821ca9c8e2946866e048d5ce34b5
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-dca9821ca9c8e2946866e048d5ce34b5
-    projectPath: Temp\UnityTempFile-dca9821ca9c8e2946866e048d5ce34b5
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-e9a08fa541db7c34eb6ed6d8e7f78bb9
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-e9a08fa541db7c34eb6ed6d8e7f78bb9
-    projectPath: Temp\UnityTempFile-e9a08fa541db7c34eb6ed6d8e7f78bb9
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-f26384222ce1ec84ba70e5115d0b11c0
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-f26384222ce1ec84ba70e5115d0b11c0
-    projectPath: Temp\UnityTempFile-f26384222ce1ec84ba70e5115d0b11c0
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-f2c57525d71b8ee429af11bc016e0dd3
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-f2c57525d71b8ee429af11bc016e0dd3
-    projectPath: Temp\UnityTempFile-f2c57525d71b8ee429af11bc016e0dd3
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-f2dc28768d1369b44bb591acdc8548a9
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-f2dc28768d1369b44bb591acdc8548a9
-    projectPath: Temp\UnityTempFile-f2dc28768d1369b44bb591acdc8548a9
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-f92622bead5469f4f9ea28a241976e6a
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-f92622bead5469f4f9ea28a241976e6a
-    projectPath: Temp\UnityTempFile-f92622bead5469f4f9ea28a241976e6a
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-fc8816d807f5ecd4ca76130f2079193f
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-fc8816d807f5ecd4ca76130f2079193f
-    projectPath: Temp\UnityTempFile-fc8816d807f5ecd4ca76130f2079193f
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-fe75a5b32779c3645a32ea2a7dfb7f71
-    fullPath: C:\Users\Vermia\TFG\Temp\UnityTempFile-fe75a5b32779c3645a32ea2a7dfb7f71
-    projectPath: Temp\UnityTempFile-fe75a5b32779c3645a32ea2a7dfb7f71
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\workerlic
-    fullPath: C:\Users\Vermia\TFG\Temp\workerlic
-    projectPath: Temp\workerlic
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
   - path: TFG.sln
     fullPath: C:\Users\Vermia\TFG\TFG.sln
     projectPath: TFG.sln

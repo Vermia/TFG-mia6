@@ -28,6 +28,8 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
+    - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -74,51 +76,51 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1558}
+      Script: {instanceID: 12756}
     - Class: 114
-      Script: {instanceID: 2290}
+      Script: {instanceID: 13484}
     - Class: 114
-      Script: {instanceID: 2802}
+      Script: {instanceID: 13990}
     - Class: 114
-      Script: {instanceID: 2810}
+      Script: {instanceID: 13998}
     - Class: 114
-      Script: {instanceID: 2982}
+      Script: {instanceID: 14170}
     - Class: 114
-      Script: {instanceID: 3072}
+      Script: {instanceID: 14258}
     - Class: 114
-      Script: {instanceID: 3224}
+      Script: {instanceID: 14410}
     - Class: 114
-      Script: {instanceID: 3470}
+      Script: {instanceID: 14656}
     - Class: 114
-      Script: {instanceID: 3482}
+      Script: {instanceID: 14668}
     - Class: 114
-      Script: {instanceID: 3592}
+      Script: {instanceID: 14778}
     - Class: 114
-      Script: {instanceID: 3648}
+      Script: {instanceID: 14834}
     - Class: 114
-      Script: {instanceID: 3826}
+      Script: {instanceID: 15008}
     - Class: 114
-      Script: {instanceID: 4004}
+      Script: {instanceID: 15186}
     - Class: 114
-      Script: {instanceID: 4042}
+      Script: {instanceID: 15224}
     - Class: 114
-      Script: {instanceID: 4068}
+      Script: {instanceID: 15250}
     - Class: 114
-      Script: {instanceID: 4288}
+      Script: {instanceID: 15470}
     - Class: 114
-      Script: {instanceID: 4676}
+      Script: {instanceID: 15856}
     - Class: 114
-      Script: {instanceID: 4886}
+      Script: {instanceID: 16062}
     - Class: 114
-      Script: {instanceID: 5278}
+      Script: {instanceID: 16446}
     - Class: 114
-      Script: {instanceID: 5354}
+      Script: {instanceID: 16522}
     - Class: 114
-      Script: {instanceID: 5536}
+      Script: {instanceID: 16700}
     - Class: 114
-      Script: {instanceID: 5564}
+      Script: {instanceID: 16728}
     - Class: 114
-      Script: {instanceID: 5624}
+      Script: {instanceID: 16788}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -260,7 +262,7 @@ ScriptsOnlyBuild:
     className: IKManager2D
   - hash:
       serializedVersion: 2
-      Hash: 77f97493172096d4055725db17a0214d
+      Hash: 083439b7a2c4121fbf9960041352c984
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BehBoard

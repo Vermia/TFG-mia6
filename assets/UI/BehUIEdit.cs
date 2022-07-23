@@ -711,7 +711,7 @@ public class BehUIEdit : MonoBehaviour{
         if(player.statements[selectedStatement] is Loop){
             Loop loop = (player.statements[selectedStatement] as Loop);
             loop.times--;
-            if(loop.times<1) loop.times++;
+            if(loop.times<2) loop.times++;
             editVeces_value.GetComponent<Text>().text=loop.times.ToString();
         }
 
