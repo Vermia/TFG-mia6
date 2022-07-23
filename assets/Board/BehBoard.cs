@@ -162,7 +162,7 @@ public class BehBoard : MonoBehaviour
         BehCharacter behlast = newObj.GetComponent<BehCharacter>();
 
         behlast.objectType=Objects.player;
-        behlast.nombre="Jugador1";
+        behlast.nombre="Robito";
         behlast.maxHP=behlast.currHP=15;
 
         newObj.GetComponent<SpriteRenderer>().sprite = BluePlayer;
@@ -550,7 +550,7 @@ public class BehBoard : MonoBehaviour
                     behlast.targetSquare  = board[i,j];
 
                     behlast.objectType=Objects.player;
-                    behlast.nombre="Jugador1";
+                    behlast.nombre="Robito";
 
                     things[last].GetComponent<SpriteRenderer>().sprite = BluePlayer;
 
