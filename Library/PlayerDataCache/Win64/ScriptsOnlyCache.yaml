@@ -731,4 +731,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Vermia/TFG/Build/TFG.exe
+  playerPath: C:/Users/Vermia/TFG/Build/Robito.exe
