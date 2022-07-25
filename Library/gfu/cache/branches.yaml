@@ -13,10 +13,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 2
-  lastUpdatedAtString: 2022-07-23T19:23:40.304+02:00
-  initializedAtString: 2022-07-23T19:23:40.291+02:00
+  lastUpdatedAtString: 2022-07-25T01:40:59.755+02:00
+  initializedAtString: 2022-07-25T01:40:59.734+02:00
   localBranches:
+  - name: a
+    tracking: 
+  - name: b
+    tracking: 
   - name: build
+    tracking: tfg-mia6/build
+  - name: codigo
+    tracking: 
+  - name: itworked
     tracking: 
   - name: main
     tracking: tfg-mia6/main
@@ -24,7 +32,11 @@ MonoBehaviour:
     tracking: tfg-mia6/master
   - name: only_build
     tracking: 
+  - name: thing
+    tracking: 
   remoteBranches:
+  - name: tfg-mia6/build
+    tracking: '[None]'
   - name: tfg-mia6/main
     tracking: '[None]'
   - name: tfg-mia6/master
@@ -39,12 +51,37 @@ MonoBehaviour:
     token: 
   localConfigBranches:
     keys:
+    - a
+    - b
     - build
+    - codigo
+    - itworked
     - main
     - master
     - only_build
+    - thing
     values:
+    - name: a
+      remote:
+        name: 
+        url: 
+      trackingBranch: 
+    - name: b
+      remote:
+        name: 
+        url: 
+      trackingBranch: 
     - name: build
+      remote:
+        name: tfg-mia6
+        url: https://github.com/Vermia/TFG-mia6
+      trackingBranch: build
+    - name: codigo
+      remote:
+        name: 
+        url: 
+      trackingBranch: 
+    - name: itworked
       remote:
         name: 
         url: 
@@ -64,15 +101,26 @@ MonoBehaviour:
         name: 
         url: 
       trackingBranch: 
+    - name: thing
+      remote:
+        name: 
+        url: 
+      trackingBranch: 
   remoteConfigBranches:
     keys:
     - tfg-mia6
     subKeys:
     - Values:
+      - build
       - main
       - master
     subKeyValues:
     - Values:
+      - name: build
+        remote:
+          name: tfg-mia6
+          url: https://github.com/Vermia/TFG-mia6
+        trackingBranch: 
       - name: main
         remote:
           name: tfg-mia6

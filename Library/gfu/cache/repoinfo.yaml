@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 1
-  lastUpdatedAtString: 2022-07-23T19:18:34.334+02:00
-  initializedAtString: 2022-07-23T19:18:34.334+02:00
+  lastUpdatedAtString: 2022-07-25T01:36:41.392+02:00
+  initializedAtString: 2022-07-25T01:36:41.392+02:00
   currentGitRemote:
     name: tfg-mia6
     url: https://github.com/Vermia/TFG-mia6
@@ -24,14 +24,14 @@ MonoBehaviour:
     function: 0
     token: 
   currentGitBranch:
-    name: master
-    tracking: tfg-mia6/master
+    name: codigo
+    tracking: 
   currentConfigBranch:
-    name: master
+    name: codigo
     remote:
-      name: tfg-mia6
-      url: https://github.com/Vermia/TFG-mia6
-    trackingBranch: master
+      name: 
+      url: 
+    trackingBranch: 
   currentConfigRemote:
     name: tfg-mia6
     url: https://github.com/Vermia/TFG-mia6

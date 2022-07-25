@@ -466,16 +466,16 @@ public class BehBoard : MonoBehaviour
     void map1(){
         GameObject.Find("UICanvasImageEdit").GetComponent<BehUIEdit>().ruleCounter=6;
         prepMap(9,9);
-        totalStarsThisLevel=1;
+        totalStarsThisLevel=2;
 
 
         createPlayer(2,5);
         createWall(7,2); createWall(7,3); createWall(3,1);
         createWall(2,1); createWall(2,2); createWall(4,2);
-        createWall(2,6); createWall(2,7); createWall(4,6); createWall(4,7);
+        createWall(2,6); createWall(2,7); createStarsPickup(4,6, 100); createWall(4,7); createWall(4,5);
         for(int i=1; i<7;++i) createWall(5,i);
         createBreakableWall(3,6, 20);
-        createGunPickup(4,5,   5);
+        createGunPickup(3,4,   5);
         createStarsPickup(3,7,100);
 
         createGoal(3,2);
