@@ -464,7 +464,7 @@ public class BehBoard : MonoBehaviour
     }
 
     void map1(){
-        GameObject.Find("UICanvasImageEdit").GetComponent<BehUIEdit>().ruleCounter=6;
+        GameObject.Find("UICanvasImageEdit").GetComponent<BehUIEdit>().ruleCounter=7;
         prepMap(9,9);
         totalStarsThisLevel=2;
 
