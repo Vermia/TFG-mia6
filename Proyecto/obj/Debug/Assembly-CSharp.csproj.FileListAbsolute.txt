@@ -1,0 +1,2 @@
+C:\Users\Vermia\TFG\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+C:\Users\Vermia\TFG\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache

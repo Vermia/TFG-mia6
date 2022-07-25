@@ -1,0 +1,139 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1666186674, guid: 68c7e4565cde54155bb78d8e935f1ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cacheType: 2
+  lastUpdatedAtString: 2022-07-25T01:40:59.755+02:00
+  initializedAtString: 2022-07-25T01:40:59.734+02:00
+  localBranches:
+  - name: a
+    tracking: 
+  - name: b
+    tracking: 
+  - name: build
+    tracking: tfg-mia6/build
+  - name: codigo
+    tracking: 
+  - name: itworked
+    tracking: 
+  - name: main
+    tracking: tfg-mia6/main
+  - name: master
+    tracking: tfg-mia6/master
+  - name: only_build
+    tracking: 
+  - name: thing
+    tracking: 
+  remoteBranches:
+  - name: tfg-mia6/build
+    tracking: '[None]'
+  - name: tfg-mia6/main
+    tracking: '[None]'
+  - name: tfg-mia6/master
+    tracking: '[None]'
+  remotes:
+  - name: tfg-mia6
+    url: https://github.com/Vermia/TFG-mia6
+    login: 
+    user: 
+    host: 
+    function: 0
+    token: 
+  localConfigBranches:
+    keys:
+    - a
+    - b
+    - build
+    - codigo
+    - itworked
+    - main
+    - master
+    - only_build
+    - thing
+    values:
+    - name: a
+      remote:
+        name: 
+        url: 
+      trackingBranch: 
+    - name: b
+      remote:
+        name: 
+        url: 
+      trackingBranch: 
+    - name: build
+      remote:
+        name: tfg-mia6
+        url: https://github.com/Vermia/TFG-mia6
+      trackingBranch: build
+    - name: codigo
+      remote:
+        name: 
+        url: 
+      trackingBranch: 
+    - name: itworked
+      remote:
+        name: 
+        url: 
+      trackingBranch: 
+    - name: main
+      remote:
+        name: tfg-mia6
+        url: https://github.com/Vermia/TFG-mia6
+      trackingBranch: main
+    - name: master
+      remote:
+        name: tfg-mia6
+        url: https://github.com/Vermia/TFG-mia6
+      trackingBranch: master
+    - name: only_build
+      remote:
+        name: 
+        url: 
+      trackingBranch: 
+    - name: thing
+      remote:
+        name: 
+        url: 
+      trackingBranch: 
+  remoteConfigBranches:
+    keys:
+    - tfg-mia6
+    subKeys:
+    - Values:
+      - build
+      - main
+      - master
+    subKeyValues:
+    - Values:
+      - name: build
+        remote:
+          name: tfg-mia6
+          url: https://github.com/Vermia/TFG-mia6
+        trackingBranch: 
+      - name: main
+        remote:
+          name: tfg-mia6
+          url: https://github.com/Vermia/TFG-mia6
+        trackingBranch: 
+      - name: master
+        remote:
+          name: tfg-mia6
+          url: https://github.com/Vermia/TFG-mia6
+        trackingBranch: 
+  configRemotes:
+    keys:
+    - tfg-mia6
+    values:
+    - name: tfg-mia6
+      url: https://github.com/Vermia/TFG-mia6
